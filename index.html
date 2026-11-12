@@ -1,0 +1,886 @@
+<!doctype html><html><head><meta charset=utf8><meta name=viewport content="width=device-width,initial-scale=1,viewport-fit=cover"><style>:root{color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#fff;color:#000}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style></head><body>
+<title>Sociology 15-Mark Answers</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Grotesk:wght@500;600;700&display=swap">
+<style>
+/* Layout: one narrow reading column, contents grid on top, each answer = header + labelled blocks (Definition, Example, Bangladesh, Argument, Conclusion). Single light theme by choice (white page requested). */
+:root {
+  --bg: #ffffff;
+  --ink: #172033;
+  --muted: #5b6578;
+  --line: #e3e7ee;
+  --soft: #f5f7fb;
+  --accent: #2748c9;
+  --def: #2748c9;   --def-tint: #eaeffd;
+  --ex: #0f766e;    --ex-tint: #e4f5f2;
+  --bd: #15803d;    --bd-tint: #e6f5ea;
+  --arg: #b45309;   --arg-tint: #fdf0dd;
+  --con: #172033;   --con-tint: #eef0f4;
+  --font-body: "Inter", system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  --font-head: "Space Grotesk", "Inter", system-ui, sans-serif;
+  color-scheme: light;
+}
+* { box-sizing: border-box; }
+body {
+  background: var(--bg);
+  color: var(--ink);
+  font-family: var(--font-body);
+  font-size: 16px;
+  line-height: 1.7;
+  padding-left: max(16px, env(safe-area-inset-left, 0px));
+  padding-right: max(16px, env(safe-area-inset-right, 0px));
+  padding-block: 32px 64px;
+}
+.wrap { max-width: 780px; margin: 0 auto; }
+h1, h2, h3, h4 { font-family: var(--font-head); margin: 0; text-wrap: balance; }
+a { color: var(--accent); }
+a:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; border-radius: 3px; }
+
+/* top */
+.top h1 { font-size: clamp(1.9rem, 5vw, 2.6rem); line-height: 1.1; letter-spacing: -0.02em; }
+.top .sub { color: var(--muted); margin: 12px 0 0; max-width: 60ch; }
+.howto { margin-top: 24px; background: var(--soft); border: 1px solid var(--line); border-radius: 10px; padding: 18px 20px; }
+.howto h2 { font-size: 1rem; margin-bottom: 8px; }
+.howto ol { margin: 0; padding-left: 1.2em; display: grid; gap: 4px; }
+.howto p { margin: 10px 0 0; color: var(--muted); font-size: 0.9rem; }
+.legend { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 16px; }
+
+/* chips + labels */
+.pill { display: inline-block; font-size: 0.72rem; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; padding: 3px 10px; border-radius: 999px; }
+.pill.def { color: var(--def); background: var(--def-tint); }
+.pill.ex  { color: var(--ex);  background: var(--ex-tint); }
+.pill.bd  { color: var(--bd);  background: var(--bd-tint); }
+.pill.arg { color: var(--arg); background: var(--arg-tint); }
+.pill.con { color: var(--con); background: var(--con-tint); }
+
+/* contents */
+.toc { margin-top: 40px; }
+.toc h2 { font-size: 1.1rem; margin-bottom: 12px; }
+.toc-sets { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 14px; }
+.toc-set { border: 1px solid var(--line); border-radius: 10px; padding: 14px 16px; min-width: 0; }
+.toc-set h3 { font-size: 0.85rem; color: var(--muted); letter-spacing: 0.06em; text-transform: uppercase; margin-bottom: 8px; }
+.toc-set ol { list-style: none; margin: 0; padding: 0; display: grid; gap: 6px; }
+.toc-set li { font-size: 0.9rem; line-height: 1.4; }
+.toc-set a { text-decoration: none; color: var(--ink); }
+.toc-set a:hover { color: var(--accent); }
+.toc-set .n { font-family: var(--font-head); font-weight: 600; color: var(--accent); margin-right: 6px; }
+
+/* set headings */
+.set { margin-top: 64px; padding-top: 20px; border-top: 2px solid var(--ink); }
+.set h2 { font-size: clamp(1.3rem, 3.5vw, 1.7rem); letter-spacing: -0.01em; }
+.set p { margin: 6px 0 0; color: var(--muted); font-size: 0.95rem; }
+
+/* each answer */
+.q { margin-top: 48px; scroll-margin-top: 16px; }
+.qhead { display: flex; flex-wrap: wrap; align-items: baseline; gap: 6px 12px; }
+.qn { font-family: var(--font-head); font-weight: 700; font-size: 0.95rem; color: #fff; background: var(--ink); padding: 2px 10px; border-radius: 6px; }
+.marks { font-size: 0.8rem; color: var(--muted); font-weight: 500; }
+.q h3 { flex-basis: 100%; font-size: clamp(1.2rem, 3.2vw, 1.5rem); line-height: 1.25; margin-top: 4px; }
+.lead { color: var(--muted); margin: 8px 0 0; }
+.terms { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 12px; align-items: center; }
+.terms .lbl { font-size: 0.75rem; font-weight: 600; letter-spacing: 0.06em; text-transform: uppercase; color: var(--muted); margin-right: 4px; }
+.terms span.t { font-size: 0.82rem; background: var(--soft); border: 1px solid var(--line); border-radius: 6px; padding: 1px 8px; }
+
+.blk { margin-top: 22px; }
+.blk > .pill { margin-bottom: 8px; }
+.blk p { margin: 0 0 10px; }
+.blk ul { margin: 0 0 10px; padding-left: 1.2em; display: grid; gap: 6px; }
+.blk li { padding-left: 2px; }
+.blk h4 { font-size: 1rem; margin: 14px 0 4px; }
+strong { font-weight: 600; }
+.blk.def strong { color: var(--def); }
+.blk.ex strong  { color: var(--ex); }
+.blk.bd strong  { color: var(--bd); }
+.blk.arg strong { color: var(--arg); }
+.blk.con { background: var(--con-tint); border-radius: 10px; padding: 14px 16px; }
+.blk.con p { margin: 0; }
+.blk.con > .pill { background: #fff; }
+
+.cmp { overflow-x: auto; margin: 6px 0 12px; border: 1px solid var(--line); border-radius: 8px; }
+.cmp table { border-collapse: collapse; width: 100%; min-width: 520px; font-size: 0.9rem; line-height: 1.5; }
+.cmp th, .cmp td { text-align: left; vertical-align: top; padding: 8px 12px; border-bottom: 1px solid var(--line); }
+.cmp th { background: var(--soft); font-family: var(--font-head); font-size: 0.82rem; }
+.cmp tr:last-child td { border-bottom: 0; }
+
+.back { margin: 18px 0 0; font-size: 0.85rem; }
+.q + .q { padding-top: 48px; border-top: 1px solid var(--line); }
+.note { font-size: 0.88rem; color: var(--muted); background: var(--soft); border-radius: 8px; padding: 8px 12px; margin: 8px 0 12px; }
+footer { margin-top: 64px; padding-top: 16px; border-top: 1px solid var(--line); color: var(--muted); font-size: 0.85rem; }
+@media (prefers-reduced-motion: no-preference) { html { scroll-behavior: smooth; } }
+</style>
+
+<div class="wrap" id="top">
+
+<header class="top">
+  <h1>Sociology: 15 Model Answers</h1>
+  <p class="sub">Introduction to Sociology. Stratification, Socialisation and Culture. Each answer is written for 15 marks in the order Definition, Example with explanation, Argument.</p>
+  <div class="howto">
+    <h2>How to use these in the exam</h2>
+    <ol>
+      <li><strong>Definition</strong> (about 3 marks): give the core words in one clean line each.</li>
+      <li><strong>Example and explanation</strong> (about 6 marks): give the example, then say <em>why</em> it proves the point. Add the Bangladesh link here when the question asks for it.</li>
+      <li><strong>Argument</strong> (about 4 marks): take a clear position, give two or three reasons, then answer the other side.</li>
+      <li><strong>Conclusion</strong> (about 2 marks): finish in two sentences.</li>
+    </ol>
+    <p>The mark split is a guide, not a rule. Use your own words once you understand an answer. Examiners reward understanding, not copied lines.</p>
+    <div class="legend">
+      <span class="pill def">Definition</span>
+      <span class="pill ex">Example and why</span>
+      <span class="pill bd">Bangladesh</span>
+      <span class="pill arg">Argument</span>
+      <span class="pill con">Conclusion</span>
+    </div>
+  </div>
+</header>
+
+<nav class="toc" aria-label="Contents">
+  <h2>Contents</h2>
+  <div class="toc-sets">
+    <div class="toc-set">
+      <h3>Set A · Stratification</h3>
+      <ol>
+        <li><a href="#q1"><span class="n">Q1</span>Inequality, stratification, status</a></li>
+        <li><a href="#q2"><span class="n">Q2</span>Four systems of stratification</a></li>
+        <li><a href="#q3"><span class="n">Q3</span>Marx and Weber</a></li>
+        <li><a href="#q4"><span class="n">Q4</span>Three perspectives on stratification</a></li>
+        <li><a href="#q5"><span class="n">Q5</span>Poverty and social mobility</a></li>
+      </ol>
+    </div>
+    <div class="toc-set">
+      <h3>Set B · Socialisation</h3>
+      <ol>
+        <li><a href="#q6"><span class="n">Q6</span>What socialisation teaches</a></li>
+        <li><a href="#q7"><span class="n">Q7</span>Cooley and Mead</a></li>
+        <li><a href="#q8"><span class="n">Q8</span>Goffman's performance</a></li>
+        <li><a href="#q9"><span class="n">Q9</span>Agents of socialisation</a></li>
+        <li><a href="#q10"><span class="n">Q10</span>Socialisation and the life course</a></li>
+      </ol>
+    </div>
+    <div class="toc-set">
+      <h3>Set C · Culture</h3>
+      <ol>
+        <li><a href="#q11"><span class="n">Q11</span>Culture and its features</a></li>
+        <li><a href="#q12"><span class="n">Q12</span>Language and universals</a></li>
+        <li><a href="#q13"><span class="n">Q13</span>Ethnocentrism and relativism</a></li>
+        <li><a href="#q14"><span class="n">Q14</span>Norms, values, subculture</a></li>
+        <li><a href="#q15"><span class="n">Q15</span>Culture change and globalisation</a></li>
+      </ol>
+    </div>
+  </div>
+</nav>
+
+<!-- ============ SET A ============ -->
+<section class="set"><h2>Set A: Stratification, Class and Mobility</h2><p>Chapter: Social Stratification, Class and Social Mobility</p></section>
+
+<!-- Q1 -->
+<article class="q" id="q1">
+  <div class="qhead"><span class="qn">Q1</span><span class="marks">15 marks</span>
+  <h3>Social inequality and stratification shape people's life chances. Define the key terms, explain ascribed and achieved status, and argue whether ascribed status still matters more in Bangladesh.</h3></div>
+  <p class="lead">Every society ranks people. This answer shows how, and who gets the better chances.</p>
+  <div class="terms"><span class="lbl">Core words</span><span class="t">social inequality</span><span class="t">social stratification</span><span class="t">ascribed status</span><span class="t">achieved status</span><span class="t">life chances</span></div>
+
+  <section class="blk def"><span class="pill def">Definition</span>
+    <ul>
+      <li><strong>Social inequality</strong> is a condition where members of a society have different amounts of wealth, prestige or power.</li>
+      <li><strong>Social stratification</strong> is the ranking of individuals or groups in layers (a hierarchy) based on wealth, power and prestige. It decides who gets access to resources and opportunities.</li>
+      <li><strong>Ascribed status</strong> is a position you are born into, such as race, gender or family background.</li>
+      <li><strong>Achieved status</strong> is a position you earn through effort, such as education or career success.</li>
+    </ul>
+  </section>
+
+  <section class="blk ex"><span class="pill ex">Example and explanation</span>
+    <p><strong>Ascribed example:</strong> A child born into a wealthy family inherits money, good schools and useful contacts. <em>Why I say this:</em> the child did nothing to earn these advantages, yet they shape the whole future. This shows that ascribed status creates structural advantages (or barriers) that last across generations.</p>
+    <p><strong>Achieved example:</strong> A poor student studies hard and becomes a doctor. <em>Why:</em> the position comes from personal effort, which shows that mobility (movement between positions) is possible.</p>
+    <p><strong>How they interact:</strong> The two statuses are linked. A rich child inherits advantage and also gets the best chance to achieve more. Marginalised groups start behind, so the same effort brings smaller rewards. Age and gender also change a person's opportunities.</p>
+  </section>
+
+  <section class="blk bd"><span class="pill bd">Bangladesh</span>
+    <p>A child from a wealthy Dhaka family goes to an English-medium school, studies abroad and joins the family business. A child of a rural day labourer attends a poorly resourced school and may drop out to work. Both are talented, but their starting lines are different. In contrast, a first-generation graduate who becomes a bank officer shows achieved status at work. Gender also matters: in many families a daughter still faces more limits on study, work and movement than a son.</p>
+  </section>
+
+  <section class="blk arg"><span class="pill arg">Argument</span>
+    <p><strong>My position:</strong> In Bangladesh, ascribed status still matters more at the starting line, but achieved status can reduce its power when education is open to all.</p>
+    <ul>
+      <li>Quality education costs money, so family background decides who can build achieved status in the first place.</li>
+      <li>Social connections and family name help in getting jobs, which favours people born into advantage.</li>
+      <li>Gender and ethnicity create barriers that effort alone cannot remove.</li>
+    </ul>
+    <p><strong>Other side:</strong> Garment work, remittance income, freelancing and wider schooling have allowed many poor families to move up. So achieved status is real, but it works best for those who already have access.</p>
+  </section>
+
+  <section class="blk con"><span class="pill con">Conclusion</span>
+    <p>Ascribed status sets the starting point and achieved status decides how far a person travels. In Bangladesh, the starting point still counts for a great deal.</p>
+  </section>
+  <p class="back"><a href="#top">Back to contents</a></p>
+</article>
+
+<!-- Q2 -->
+<article class="q" id="q2">
+  <div class="qhead"><span class="qn">Q2</span><span class="marks">15 marks</span>
+  <h3>Compare the four systems of stratification: slavery, caste, estate and class. Include the zamindar system of Bangladesh and argue whether slavery and caste still exist today.</h3></div>
+  <p class="lead">The four systems differ in one key thing: how much a person can move out of the position they were born into.</p>
+  <div class="terms"><span class="lbl">Core words</span><span class="t">slavery</span><span class="t">caste</span><span class="t">estate system</span><span class="t">social class</span><span class="t">closed system</span><span class="t">open system</span></div>
+
+  <section class="blk def"><span class="pill def">Definition</span>
+    <ul>
+      <li><strong>Slavery:</strong> people are treated as property and have no personal freedom or legal rights.</li>
+      <li><strong>Caste:</strong> a rigid, hereditary system where birth decides social position.</li>
+      <li><strong>Estate system:</strong> a feudal system where peasants work on land owned by nobles and give labour in return for protection.</li>
+      <li><strong>Social class:</strong> a division of people by money, education and jobs. People in one class share similar lifestyles and opportunities.</li>
+    </ul>
+  </section>
+
+  <section class="blk ex"><span class="pill ex">Example and explanation</span>
+    <p><strong>Slavery:</strong> In ancient Greece people became slaves through war or conquest, and some could gain freedom. In the U.S. and Latin America slavery was based on race, so it was nearly impossible to change status. <em>Why this matters:</em> racial slavery made status permanent, and racial inequality continued after abolition through segregation and discrimination.</p>
+    <p><strong>Caste:</strong> In India people were born into castes. The Dalits, the lowest group, faced severe discrimination and exclusion. India officially banned caste discrimination in 1950, but caste-based inequality still exists in some places.</p>
+    <p><strong>Estate:</strong> In medieval feudal society nobles owned the land, and that gave them higher status than peasants.</p>
+    <p><strong>Class:</strong> People are often born into a class but can move through education or a better job, although moving is hard.</p>
+    <p><strong>Key comparison:</strong> Slavery removes all rights, while caste keeps people in fixed positions. Both are <strong>closed systems</strong> because they depend on ascribed status. Class is the most <strong>open system</strong> because achieved status can change position.</p>
+  </section>
+
+  <section class="blk bd"><span class="pill bd">Bangladesh</span>
+    <p>The <strong>zamindar</strong> system was an estate-type system. A few wealthy families owned the land, and peasants worked it. The landowners controlled the local economy and politics, so they held higher status, while peasants had limited opportunities. <em>Why it produced inequality:</em> land was the main source of wealth, and whoever owned it also held power over the people who depended on it.</p>
+  </section>
+
+  <section class="blk arg"><span class="pill arg">Argument</span>
+    <p><strong>My position:</strong> Slavery and caste have been abolished by law, but their modern forms still exist.</p>
+    <ul>
+      <li><strong>Modern slavery</strong> appears as human trafficking, forced labour and debt bondage, where people cannot leave their work.</li>
+      <li><strong>Caste-type discrimination</strong> continues in South Asia, including against Dalit communities. In Bangladesh, groups such as the Harijan (sweeper) communities face exclusion in housing, jobs and social respect.</li>
+    </ul>
+    <p><strong>Other side:</strong> Legally, these systems no longer exist as official structures, and open class systems give far more freedom. But a law ending a system does not instantly end the beliefs behind it.</p>
+  </section>
+
+  <section class="blk con"><span class="pill con">Conclusion</span>
+    <p>The systems range from closed to open, and class is the most open. Old systems like slavery and caste have changed form, not completely disappeared.</p>
+  </section>
+  <p class="back"><a href="#top">Back to contents</a></p>
+</article>
+
+<!-- Q3 -->
+<article class="q" id="q3">
+  <div class="qhead"><span class="qn">Q3</span><span class="marks">15 marks</span>
+  <h3>Marx and Weber explained stratification differently. Define their key ideas, apply both to Bangladesh and argue which theory explains modern inequality better.</h3></div>
+  <p class="lead">Marx looked at one thing, ownership. Weber looked at three: class, status and power.</p>
+  <div class="terms"><span class="lbl">Core words</span><span class="t">bourgeoisie</span><span class="t">proletariat</span><span class="t">class consciousness</span><span class="t">false consciousness</span><span class="t">class</span><span class="t">status</span><span class="t">power</span></div>
+
+  <section class="blk def"><span class="pill def">Definition</span>
+    <h4>Karl Marx</h4>
+    <ul>
+      <li>Social relations are shaped by control over the <strong>means of production</strong> (land, factories).</li>
+      <li><strong>Bourgeoisie:</strong> the capitalist class that owns production. <strong>Proletariat:</strong> the working class that sells its labour for wages.</li>
+      <li><strong>Class consciousness:</strong> workers realise they share the same exploitation.</li>
+      <li><strong>False consciousness:</strong> workers wrongly believe their problems are personal rather than systemic.</li>
+    </ul>
+    <h4>Max Weber</h4>
+    <ul>
+      <li><strong>Class:</strong> groups sharing economic resources such as income and wealth (their market position).</li>
+      <li><strong>Status:</strong> the prestige or social honour a person holds.</li>
+      <li><strong>Power:</strong> the ability to influence or control the actions of others.</li>
+    </ul>
+  </section>
+
+  <section class="blk ex"><span class="pill ex">Example and explanation</span>
+    <p><strong>Marx:</strong> Under feudalism nobles owned land and peasants worked under their terms. Under capitalism factory owners own the means of production and workers sell labour. <em>Why:</em> the owner earns profit from the workers' work, so the two groups have opposite interests. The ruling class also keeps control through ideology, ideas that make inequality look fair or natural. Marx predicted workers would develop class consciousness and challenge the system.</p>
+    <p><strong>Weber:</strong> Weber agreed class matters but said it is not the only factor. A person can be rich but not respected, or respected but not rich. <em>Why:</em> class, status and power often do not line up, so wealth alone cannot explain a person's place in society. He also said economic and political power are often connected, since those who control resources influence decisions.</p>
+  </section>
+
+  <section class="blk bd"><span class="pill bd">Bangladesh</span>
+    <ul>
+      <li><strong>Marx:</strong> Garment factory owners (bourgeoisie) and garment workers (proletariat). Owners control capital, workers depend on wages. If a worker thinks low pay is just bad luck, that is false consciousness. If workers organise for better wages, that is class consciousness.</li>
+      <li><strong>Weber:</strong> A newly rich businessman has high class but may lack social prestige. A respected university teacher has high status but a modest income. A local political leader has power that is not only based on money.</li>
+    </ul>
+  </section>
+
+  <section class="blk arg"><span class="pill arg">Argument</span>
+    <p><strong>My position:</strong> Weber explains modern inequality better, because it is multi-dimensional.</p>
+    <ul>
+      <li>Modern societies have many groups, such as professionals, managers and the self-employed, who do not fit neatly into only two classes.</li>
+      <li>Prestige and political connections change life chances even when income is the same.</li>
+      <li>Weber still includes economic class, so he keeps Marx's main insight.</li>
+    </ul>
+    <p><strong>Other side:</strong> Marx is stronger on explaining exploitation and why inequality continues. Ownership of land and factories still creates huge gaps in Bangladesh.</p>
+  </section>
+
+  <section class="blk con"><span class="pill con">Conclusion</span>
+    <p>Marx shows why economic ownership matters, and Weber shows that rank has more than one dimension. Using both gives the fullest picture.</p>
+  </section>
+  <p class="back"><a href="#top">Back to contents</a></p>
+</article>
+
+<!-- Q4 -->
+<article class="q" id="q4">
+  <div class="qhead"><span class="qn">Q4</span><span class="marks">15 marks</span>
+  <h3>Functionalist, conflict and interactionist perspectives view stratification differently. Explain each with examples, criticise the functionalist view and argue which best explains Bangladesh.</h3></div>
+  <p class="lead">One question, three lenses: why does stratification exist and is it good or bad?</p>
+  <div class="terms"><span class="lbl">Core words</span><span class="t">functionalism</span><span class="t">conflict theory</span><span class="t">interactionism</span><span class="t">dominant ideology</span><span class="t">conspicuous consumption</span></div>
+
+  <section class="blk def"><span class="pill def">Definition</span>
+    <p>A <strong>sociological perspective</strong> is a way of looking at society. The three perspectives answer the stratification question differently.</p>
+    <div class="cmp"><table>
+      <thead><tr><th></th><th>Functionalist</th><th>Conflict</th><th>Interactionist</th></tr></thead>
+      <tbody>
+        <tr><th>Purpose of stratification</th><td>Helps fill social positions</td><td>Allows exploitation</td><td>Shapes people's lifestyles</td></tr>
+        <tr><th>View of inequality</th><td>Necessary to some extent</td><td>Excessive and growing</td><td>Shapes relations between groups</td></tr>
+        <tr><th>View of the wealthy</th><td>Talented and skilled, creating opportunities for others</td><td>Use the dominant ideology to protect their interests</td><td>Show off wealth through conspicuous consumption and leisure</td></tr>
+      </tbody>
+    </table></div>
+  </section>
+
+  <section class="blk ex"><span class="pill ex">Example and explanation</span>
+    <p><strong>Functionalist:</strong> Doctors and street cleaners are paid differently. <em>Why:</em> training to become a doctor takes years and few people qualify, so higher rewards motivate people to study and make sure important jobs are filled by skilled people.</p>
+    <p><strong>Conflict:</strong> Built on Marx, it sees history as a struggle between oppressors and the oppressed. Elites keep their position not only through control of resources but through <strong>dominant ideology</strong>, beliefs that justify inequality, such as "the rich deserve it because they worked harder". <em>Why:</em> if the poor accept this idea, they are less likely to challenge the system. Modern conflict theorists add gender, race and age.</p>
+    <p><strong>Interactionist:</strong> It studies everyday life. The rich display status through <strong>conspicuous consumption</strong> (buying to show wealth) and conspicuous leisure. <em>Why:</em> these signs tell others where a person stands, which affects how groups treat one another.</p>
+    <h4>Criticism of functionalism</h4>
+    <ul>
+      <li>Jobs mostly done by women, or in lower-status sectors, are undervalued even though they are important (for example care work).</li>
+      <li>People are not only motivated by money. Personal satisfaction and values also matter.</li>
+      <li>It cannot explain inherited status or gaps based on class, gender, race or ethnicity.</li>
+    </ul>
+  </section>
+
+  <section class="blk bd"><span class="pill bd">Bangladesh</span>
+    <p>Land and wealth are concentrated in a small elite, and family background strongly shapes who gets quality education. Big weddings, expensive cars and living in elite areas of Dhaka work as status signals, which fits the interactionist view. Higher pay for doctors and engineers fits the functionalist view.</p>
+  </section>
+
+  <section class="blk arg"><span class="pill arg">Argument</span>
+    <p><strong>My position:</strong> The conflict perspective best explains stratification in Bangladesh.</p>
+    <ul>
+      <li>Wealth and resources are held by a small elite while most people struggle for basic needs.</li>
+      <li>Children from poor homes face barriers in education and health care, so inequality repeats across generations. The functionalist idea of rewards for talent cannot explain this.</li>
+      <li>Women and ethnic minorities face discrimination that limits access to resources.</li>
+    </ul>
+    <p><strong>Other side:</strong> Functionalism explains why some skilled jobs pay more, and interactionism explains how status is displayed in daily life. So the best answer uses conflict as the main lens and the other two as support.</p>
+  </section>
+
+  <section class="blk con"><span class="pill con">Conclusion</span>
+    <p>The three perspectives describe different parts of the same system. For Bangladesh, where inherited advantage is strong, conflict theory explains the most.</p>
+  </section>
+  <p class="back"><a href="#top">Back to contents</a></p>
+</article>
+
+<!-- Q5 -->
+<article class="q" id="q5">
+  <div class="qhead"><span class="qn">Q5</span><span class="marks">15 marks</span>
+  <h3>Poverty and social mobility are central problems of stratification. Define the terms, explain the types and barriers of mobility, and argue whether education is enough to break the poverty cycle in Bangladesh.</h3></div>
+  <p class="lead">Poverty is about what you lack. Mobility is about whether you can move out of it.</p>
+  <div class="terms"><span class="lbl">Core words</span><span class="t">absolute poverty</span><span class="t">relative poverty</span><span class="t">open system</span><span class="t">closed system</span><span class="t">vertical mobility</span><span class="t">intergenerational</span><span class="t">intragenerational</span></div>
+
+  <section class="blk def"><span class="pill def">Definition</span>
+    <ul>
+      <li><strong>Absolute poverty:</strong> lacking basic needs such as food, water, shelter and clothing. It is measured by a threshold, such as a World Bank daily income line.</li>
+      <li><strong>Relative poverty:</strong> being poor compared with others in the same society, with less access to education, health care and housing.</li>
+      <li><strong>Social mobility:</strong> movement of individuals or groups between positions in society.</li>
+      <li><strong>Open system:</strong> position depends on achievement. <strong>Closed system:</strong> position depends on ascribed traits, such as slavery or caste.</li>
+    </ul>
+    <p class="note">Your lecture uses the World Bank's $1.25 per day line as the example. The exact line has been updated over time, so write "a World Bank poverty line" if you are unsure of the current figure.</p>
+  </section>
+
+  <section class="blk ex"><span class="pill ex">Example and explanation</span>
+    <p><strong>Absolute vs relative:</strong> A family that cannot afford enough food is in absolute poverty. A family that eats well but cannot afford to send children to a good school or hospital, while neighbours can, is in relative poverty. <em>Why both matter:</em> absolute measures are simple but ignore context, while relative poverty shows inequality between and within groups. For example, women often own less property than men, and household income can hide unequal sharing inside a family.</p>
+    <p><strong>Types of mobility:</strong></p>
+    <ul>
+      <li><strong>Horizontal:</strong> a move to a similar-status position (a teacher changes school).</li>
+      <li><strong>Vertical:</strong> a move to a higher or lower status (a farmer's child becomes an engineer).</li>
+      <li><strong>Intergenerational:</strong> change across generations (child does better than parents).</li>
+      <li><strong>Intragenerational:</strong> change within one person's life (a clerk becomes a manager).</li>
+    </ul>
+    <p><strong>Factors:</strong> <em>Education</em> is the main road upward, but access to higher education and quality schooling is hard for poor families. <em>Race and ethnicity</em> create barriers, as in the U.S. where African Americans face discrimination. <em>Gender</em> limits women through fewer and lower-paid jobs with fewer chances of promotion. <em>Family background</em> decides the resources a person starts with.</p>
+  </section>
+
+  <section class="blk bd"><span class="pill bd">Bangladesh</span>
+    <p>Wealth is concentrated in a small elite while a large share of the population stays in poverty. Children from low-income households face financial limits and weak facilities in education and health care. Family background, gender and ethnicity strongly influence jobs and schooling, and institutional barriers such as unequal schooling and labour-market discrimination keep marginalised groups from moving up.</p>
+  </section>
+
+  <section class="blk arg"><span class="pill arg">Argument</span>
+    <p><strong>My position:</strong> Education is necessary but not enough on its own.</p>
+    <ul>
+      <li>Poor children often leave school early because the family needs income, so education is not equally available.</li>
+      <li>The quality of schools differs by class and location, so a degree from a weak school opens fewer doors.</li>
+      <li>Even with qualifications, labour-market discrimination by gender, ethnicity or connections can block advancement.</li>
+    </ul>
+    <p><strong>Other side:</strong> Education is still the strongest tool of upward intergenerational mobility. Where children do reach university, families often move up in one generation.</p>
+  </section>
+
+  <section class="blk con"><span class="pill con">Conclusion</span>
+    <p>Education opens the door, but fair access, good quality and equal job opportunity are needed to walk through it. Breaking the poverty cycle needs education together with structural change.</p>
+  </section>
+  <p class="back"><a href="#top">Back to contents</a></p>
+</article>
+
+<!-- ============ SET B ============ -->
+<section class="set"><h2>Set B: Socialisation and the Self</h2><p>Chapter: Socialisation</p></section>
+
+<!-- Q6 -->
+<article class="q" id="q6">
+  <div class="qhead"><span class="qn">Q6</span><span class="marks">15 marks</span>
+  <h3>Socialisation teaches more than behaviour. Define it, explain how it teaches power and inequality, compare how sons and daughters are socialised in Bangladesh and argue whether it produces conformity or choice.</h3></div>
+  <p class="lead">Socialisation turns a newborn into a member of society, and it also teaches that child their place.</p>
+  <div class="terms"><span class="lbl">Core words</span><span class="t">socialisation</span><span class="t">norms</span><span class="t">values</span><span class="t">self-identity</span><span class="t">privilege</span><span class="t">marginalisation</span></div>
+
+  <section class="blk def"><span class="pill def">Definition</span>
+    <p><strong>Socialisation</strong> is the lifelong process of learning how to participate in society. From infancy to old age we learn norms, values, customs and behaviours that shape our identity and interactions. Through it we become functional members of society.</p>
+    <p><strong>Why it is important:</strong></p>
+    <ul>
+      <li>It shapes our self-identity and worldview.</li>
+      <li>It keeps cultural continuity and social order.</li>
+      <li>It sets expectations for behaviour in different social roles.</li>
+      <li>It influences whether we experience privilege or marginalisation.</li>
+    </ul>
+  </section>
+
+  <section class="blk ex"><span class="pill ex">Example and explanation</span>
+    <p>Children are socialised differently by gender, race and class. <strong>A wealthy child</strong> may grow up believing success comes naturally. <strong>A working-class child</strong> may learn that resilience and struggle are a normal part of life. <em>Why this shows power and inequality:</em> neither child chose these beliefs. They absorb them from family and surroundings, and the beliefs then prepare each child for a different position in the hierarchy. So socialisation does not only teach how to behave "properly". It also teaches who has power, who benefits from certain norms and what to expect if you follow or challenge them.</p>
+  </section>
+
+  <section class="blk bd"><span class="pill bd">Bangladesh</span>
+    <p>In many Bangladeshi families boys are encouraged to be confident, outgoing and to think of earning, while girls are taught to be modest, helpful at home and careful about movement. A son's education may be seen as an investment, and a daughter's as temporary if marriage is expected. <em>Effect:</em> these early lessons shape gender expectations, so girls may expect fewer career chances and boys may expect to lead. Class adds another layer: a child in an elite family learns ambition and global exposure, while a child in a poor family learns early responsibility.</p>
+  </section>
+
+  <section class="blk arg"><span class="pill arg">Argument</span>
+    <p><strong>My position:</strong> Socialisation strongly pushes people towards conformity, but it does not remove choice.</p>
+    <ul>
+      <li>It works from birth, through family, school and media, so most people accept existing norms without noticing.</li>
+      <li>Social pressure and sanctions reward conformity.</li>
+      <li>But people can question what they were taught. Many Bangladeshi women now study, work and lead despite traditional expectations, which shows that socialisation can be challenged.</li>
+    </ul>
+  </section>
+
+  <section class="blk con"><span class="pill con">Conclusion</span>
+    <p>Socialisation shapes who we think we are and where we stand, but people can reshape those lessons as they meet new experiences.</p>
+  </section>
+  <p class="back"><a href="#top">Back to contents</a></p>
+</article>
+
+<!-- Q7 -->
+<article class="q" id="q7">
+  <div class="qhead"><span class="qn">Q7</span><span class="marks">15 marks</span>
+  <h3>Cooley and Mead explain how the self develops. Define their key concepts, explain the stages with examples, compare the theories and argue whether the self is purely a social product.</h3></div>
+  <p class="lead">Both say the self is built through other people. They explain the process in different ways.</p>
+  <div class="terms"><span class="lbl">Core words</span><span class="t">looking-glass self</span><span class="t">significant others</span><span class="t">generalised other</span><span class="t">preparatory stage</span><span class="t">play stage</span><span class="t">game stage</span></div>
+
+  <section class="blk def"><span class="pill def">Definition</span>
+    <ul>
+      <li><strong>Looking-glass self (Cooley):</strong> we form our self-view based on what we think others think of us.</li>
+      <li><strong>Significant others (Mead):</strong> the people closest to us, such as parents and caregivers, who influence us first.</li>
+      <li><strong>Generalised other (Mead):</strong> the values, norms and expectations of society as a whole, which a person learns to see themselves through.</li>
+    </ul>
+  </section>
+
+  <section class="blk ex"><span class="pill ex">Example and explanation</span>
+    <h4>Cooley's three stages</h4>
+    <ul>
+      <li>We <strong>imagine how we appear</strong> to others (Am I funny? Intelligent?).</li>
+      <li>We <strong>interpret their reactions</strong> (Did they laugh at my joke or ignore me?).</li>
+      <li>We <strong>develop feelings about ourselves</strong> (pride, shame, confidence).</li>
+    </ul>
+    <p><em>Example:</em> If a teacher criticises a student, the student may wrongly decide "I am not smart". <em>Why it shows the idea:</em> the self-view comes from the imagined judgment of others, not from fact. It can change later, for example when the student gets good grades.</p>
+    <h4>Mead's three stages</h4>
+    <ul>
+      <li><strong>Preparatory stage:</strong> children imitate people around them, often family. This builds the base for symbols and language.</li>
+      <li><strong>Play stage:</strong> children pretend to be others (doctor, superhero) and learn that other people have roles and views.</li>
+      <li><strong>Game stage:</strong> children understand many roles and social rules at once and see their own place in society.</li>
+    </ul>
+    <p><em>Example:</em> A child playing "teacher" learns what a teacher does, but only in the game stage understands how teachers, students and principals relate in a school. <em>Generalised other example:</em> a child first says "thank you" because parents instruct them. Later the child sees that politeness is a wider social expectation and acts politely because they understand its social meaning.</p>
+    <h4>Comparison</h4>
+    <div class="cmp"><table>
+      <thead><tr><th></th><th>Cooley</th><th>Mead</th></tr></thead>
+      <tbody>
+        <tr><th>Focus</th><td>Feelings towards ourselves from how others see us</td><td>Taking the role of others, then society</td></tr>
+        <tr><th>Stages</th><td>Not distinct stages</td><td>Three distinct stages</td></tr>
+        <tr><th>Key idea</th><td>Looking-glass self</td><td>The self and the generalised other</td></tr>
+      </tbody>
+    </table></div>
+  </section>
+
+  <section class="blk arg"><span class="pill arg">Argument</span>
+    <p><strong>My position:</strong> The self is mainly, but not purely, a social product.</p>
+    <ul>
+      <li>Cooley and Mead show that identity is formed through interaction, and it keeps changing across life.</li>
+      <li>A child raised in a different family and culture would develop a different self.</li>
+      <li>But psychologists add other factors. Freud stressed inborn drives and Piaget described four stages of cognitive development, so biology and thinking ability also shape the self.</li>
+    </ul>
+  </section>
+
+  <section class="blk con"><span class="pill con">Conclusion</span>
+    <p>Cooley explains how feelings about the self form, and Mead explains how we learn society's viewpoint. Together they show the self is social, though not only social.</p>
+  </section>
+  <p class="back"><a href="#top">Back to contents</a></p>
+</article>
+
+<!-- Q8 -->
+<article class="q" id="q8">
+  <div class="qhead"><span class="qn">Q8</span><span class="marks">15 marks</span>
+  <h3>Goffman viewed social life as a performance. Define his key concepts, explain them with examples, show them in Bangladeshi settings and argue whether his view makes identity "fake".</h3></div>
+  <p class="lead">Goffman (1959) compared everyday life to theatre. We are actors, and other people are the audience.</p>
+  <div class="terms"><span class="lbl">Core words</span><span class="t">dramaturgy</span><span class="t">impression management</span><span class="t">face-work</span><span class="t">front stage</span><span class="t">back stage</span></div>
+
+  <section class="blk def"><span class="pill def">Definition</span>
+    <ul>
+      <li><strong>Roles and performance:</strong> we play different roles in different settings, such as professional at work and casual with friends.</li>
+      <li><strong>Impression management:</strong> adjusting our behaviour to shape how others see us.</li>
+      <li><strong>Face-work:</strong> protecting our dignity and "saving face" in interactions.</li>
+      <li><strong>Front stage:</strong> where we perform for an audience. <strong>Back stage:</strong> where we relax and drop the act.</li>
+    </ul>
+  </section>
+
+  <section class="blk ex"><span class="pill ex">Example and explanation</span>
+    <ul>
+      <li>A student downplays excitement about good grades so as not to upset classmates. <em>Why:</em> managing the impression protects friendships.</li>
+      <li>A store employee looks extra busy when the manager is watching. <em>Why:</em> the manager is the audience, and the performance shows commitment.</li>
+      <li>A person at an event pretends to be waiting for someone, to avoid looking awkward. <em>Why:</em> this is face-work, protecting self-image.</li>
+      <li>A student answering in class is front stage. The same student joking with close friends afterwards is back stage.</li>
+    </ul>
+    <p>From childhood we learn impression management and adapt to different audiences. Goffman argued this is a basic part of everyday life, and that identity is not fixed but performed and shaped by social interaction.</p>
+  </section>
+
+  <section class="blk bd"><span class="pill bd">Bangladesh</span>
+    <ul>
+      <li><strong>Guests at home:</strong> the drawing room is front stage, tidy and polite with tea and snacks. The family's usual routine in the rest of the home is back stage.</li>
+      <li><strong>Job interview:</strong> formal dress and careful speech create a "professional" impression. At home the same person behaves differently.</li>
+      <li><strong>Family events and weddings:</strong> people wear their best clothes and show a successful image, even if they have worries.</li>
+      <li><strong>Social media:</strong> a Facebook or Instagram profile is a front stage, with selected photos and updates, while the real day-to-day life stays back stage.</li>
+    </ul>
+    <p>These show social norms at work: people adjust behaviour to match what the audience expects.</p>
+  </section>
+
+  <section class="blk arg"><span class="pill arg">Argument</span>
+    <p><strong>My position:</strong> Goffman's view does not make identity fake. It shows that identity is socially shaped.</p>
+    <ul>
+      <li>Playing different roles is how people meet different expectations and keep social life smooth. It is not lying.</li>
+      <li>The back-stage self is not "more real" than the front-stage self. Both are parts of one person.</li>
+      <li>It shows that norms guide behaviour, and people follow them to be accepted.</li>
+    </ul>
+    <p><strong>Other side:</strong> Critics say the theory treats people as always acting for effect and ignores sincere feeling. But the central point still stands: identity depends on interaction.</p>
+  </section>
+
+  <section class="blk con"><span class="pill con">Conclusion</span>
+    <p>Goffman shows that identity is performed in context. This does not make it false. It makes it social.</p>
+  </section>
+  <p class="back"><a href="#top">Back to contents</a></p>
+</article>
+
+<!-- Q9 -->
+<article class="q" id="q9">
+  <div class="qhead"><span class="qn">Q9</span><span class="marks">15 marks</span>
+  <h3>Agents of socialisation shape our lives. Define primary and secondary agents, explain each major agent with an example, discuss which matter most for Bangladeshi youth and argue whether media has replaced family.</h3></div>
+  <p class="lead">Agents are the people and institutions that teach us the rules of society.</p>
+  <div class="terms"><span class="lbl">Core words</span><span class="t">primary agent</span><span class="t">secondary agent</span><span class="t">hidden curriculum</span><span class="t">peer group</span><span class="t">mass media</span><span class="t">resocialisation</span></div>
+
+  <section class="blk def"><span class="pill def">Definition</span>
+    <p><strong>Agents of socialisation</strong> are the social forces that influence our lives and change our self-image throughout life. A <strong>primary agent</strong> (the family) works in early life and has the deepest effect. <strong>Secondary agents</strong> (school, peers, media, workplace, religion, government) work outside the home and add new lessons.</p>
+  </section>
+
+  <section class="blk ex"><span class="pill ex">Example and explanation</span>
+    <ul>
+      <li><strong>Family:</strong> the first and most influential agent. It teaches values, beliefs, language and expectations, and it reinforces class, gender and racial identity. <em>Example:</em> boys are encouraged to be assertive and girls to be nurturing, which shapes gender expectations.</li>
+      <li><strong>School:</strong> teaches discipline, cooperation and competition through the curriculum. The <strong>hidden curriculum</strong> teaches obedience, time management and respect for authority without saying so. It also reinforces inequality, because the quality of education depends on class and location.</li>
+      <li><strong>Peer group:</strong> influence grows in adolescence and helps develop independence from family norms. <em>Example:</em> slang, fashion and behaviour spread among students. Peers can challenge or reinforce dominant norms.</li>
+      <li><strong>Mass media and technology:</strong> much socialisation of young people now happens online. Media shape perceptions of reality, spread stereotypes and norms, and create role models. <em>Example:</em> beauty standards in advertisements affect self-esteem. The critical question is who controls the media and whom it benefits.</li>
+      <li><strong>Workplace:</strong> teaches professional norms, authority and teamwork, and requires resocialisation to new behaviours. It can also reinforce hierarchy and inequality.</li>
+      <li><strong>Religion:</strong> provides moral values, rituals and belonging. It can unify communities but also support rigid divisions.</li>
+      <li><strong>Government:</strong> regulates behaviour through laws and policies, such as marriage laws and education policy, and defines rights and responsibilities.</li>
+    </ul>
+  </section>
+
+  <section class="blk bd"><span class="pill bd">Bangladesh</span>
+    <p>For Bangladeshi youth, <strong>family</strong> still sets values about respect, marriage and career. <strong>School and coaching culture</strong> push exam competition and obedience. <strong>Peers</strong> on campus shape language and style. <strong>Social media and online video</strong> now take a large share of young people's time and bring global trends and role models. <strong>Religion</strong> shapes ethics and festivals, and <strong>government</strong> sets the education system and laws. Among these, family and media are the two strongest today.</p>
+  </section>
+
+  <section class="blk arg"><span class="pill arg">Argument</span>
+    <p><strong>My position:</strong> Media has become a powerful agent and may be the most time-consuming one for young people, but it has not replaced the family.</p>
+    <ul>
+      <li>The family comes first and builds the base of values, language and identity on which later agents build. Media is interpreted through those values.</li>
+      <li>Media is stronger than before because it is constant, global and begins at younger ages.</li>
+      <li>The two interact: the family often decides what a child may watch, and media can in turn challenge what the family taught.</li>
+    </ul>
+    <p><strong>Critical view:</strong> Conflict theorists ask who controls media content and whether it serves powerful groups.</p>
+  </section>
+
+  <section class="blk con"><span class="pill con">Conclusion</span>
+    <p>Family remains the foundation, while media is the fastest-growing influence. Socialisation today is a mix of many agents working together.</p>
+  </section>
+  <p class="back"><a href="#top">Back to contents</a></p>
+</article>
+
+<!-- Q10 -->
+<article class="q" id="q10">
+  <div class="qhead"><span class="qn">Q10</span><span class="marks">15 marks</span>
+  <h3>Socialisation continues throughout life. Define its types and the life course, give examples, apply them to a Bangladeshi student and argue whether socialisation ever really ends.</h3></div>
+  <p class="lead">We never stop learning how to fit into new roles.</p>
+  <div class="terms"><span class="lbl">Core words</span><span class="t">primary socialisation</span><span class="t">secondary socialisation</span><span class="t">anticipatory socialisation</span><span class="t">resocialisation</span><span class="t">life course</span><span class="t">rites of passage</span></div>
+
+  <section class="blk def"><span class="pill def">Definition</span>
+    <ul>
+      <li><strong>Primary socialisation:</strong> early childhood learning, often in the family.</li>
+      <li><strong>Secondary socialisation:</strong> learning the proper behaviour for a smaller group within society, outside the home (school, work).</li>
+      <li><strong>Anticipatory socialisation:</strong> preparation for future roles such as a career or parenthood.</li>
+      <li><strong>Resocialisation:</strong> unlearning old behaviours and adopting new ones, often in total institutions like the military.</li>
+      <li><strong>Life course:</strong> the stages from birth to death (childhood, adolescence, adulthood, old age).</li>
+    </ul>
+  </section>
+
+  <section class="blk ex"><span class="pill ex">Example and explanation</span>
+    <ul>
+      <li><strong>Primary:</strong> a toddler learns language and basic manners from parents. <em>Why:</em> this is the first and deepest learning.</li>
+      <li><strong>Secondary:</strong> a student learns classroom rules, or a new employee learns office behaviour. <em>Why:</em> each group has its own expected conduct.</li>
+      <li><strong>Anticipatory:</strong> a final-year student takes internships and practises interviews to prepare for work. <em>Why:</em> they are learning the role before they hold it.</li>
+      <li><strong>Resocialisation:</strong> a recruit entering the military gives up civilian habits and adopts strict discipline. <em>Why:</em> the institution deliberately replaces old behaviour.</li>
+    </ul>
+    <p><strong>Life course events</strong> such as starting school, graduating, marriage and retirement mark changes in status. Moments like losing a job or the birth of a child trigger major change. Some societies mark stages with formal rites of passage. People also experience the same event differently at different points in life.</p>
+  </section>
+
+  <section class="blk bd"><span class="pill bd">Bangladesh</span>
+    <p>A Bangladeshi student moves from <strong>family and school</strong> (primary and secondary) to <strong>university</strong>, where independence and new peer norms appear. Internships, career talks and job preparation are <strong>anticipatory socialisation</strong>. The first job requires <strong>resocialisation</strong> into office rules, deadlines and workplace hierarchy. Later events, such as marriage, parenthood and retirement, bring further new roles. At each step the person must learn the norms of the new group.</p>
+  </section>
+
+  <section class="blk arg"><span class="pill arg">Argument</span>
+    <p><strong>My position:</strong> Socialisation never fully ends.</p>
+    <ul>
+      <li>Roles keep changing across life, and each new role has new norms to learn.</li>
+      <li>Society and technology change, so even adults must learn new rules (for example new workplace tools or online behaviour).</li>
+      <li>Sudden events such as job loss or having a child force new learning.</li>
+    </ul>
+    <p><strong>Other side:</strong> The most intense and formative socialisation happens in childhood, and later learning builds on it. So the early years matter most, but learning continues.</p>
+  </section>
+
+  <section class="blk con"><span class="pill con">Conclusion</span>
+    <p>Socialisation starts in the family but continues through the whole life course, because every new role comes with new expectations.</p>
+  </section>
+  <p class="back"><a href="#top">Back to contents</a></p>
+</article>
+
+<!-- ============ SET C ============ -->
+<section class="set"><h2>Set C: Culture</h2><p>Chapter: Culture</p></section>
+
+<!-- Q11 -->
+<article class="q" id="q11">
+  <div class="qhead"><span class="qn">Q11</span><span class="marks">15 marks</span>
+  <h3>Culture shapes a group's way of life. Define culture and its key features, explain the sociological perspectives on culture and use Bangladeshi examples to argue that culture is learned, not biological.</h3></div>
+  <p class="lead">Culture is the shared way of life that people learn, not something they are born with.</p>
+  <div class="terms"><span class="lbl">Core words</span><span class="t">culture</span><span class="t">enculturation</span><span class="t">symbols</span><span class="t">dominant culture</span><span class="t">dominant ideology</span></div>
+
+  <section class="blk def"><span class="pill def">Definition</span>
+    <p><strong>Culture</strong> is an all-encompassing system that shapes the way of life for a group of people. It includes language, customs, beliefs, rituals and ways of understanding the world. Tylor (1871) defined it as the complex whole that includes knowledge, belief, arts, morals, law, custom and other capabilities acquired by a person as a member of society.</p>
+  </section>
+
+  <section class="blk ex"><span class="pill ex">Example and explanation</span>
+    <h4>Key features</h4>
+    <ul>
+      <li><strong>Learned:</strong> through <strong>enculturation</strong>, we absorb meanings, symbols and behaviour. <em>Example:</em> a child learns to greet elders respectfully by watching others.</li>
+      <li><strong>Symbolic:</strong> verbal or non-verbal symbols stand for ideas or objects. <em>Example:</em> a national flag stands for a country. Symbols are unique to humans and are central to cultural learning.</li>
+      <li><strong>Shared:</strong> common beliefs, values and experiences unite people. <em>Example:</em> a festival celebrated by a whole community.</li>
+      <li><strong>All-encompassing:</strong> covers daily practices, technology and popular culture.</li>
+      <li><strong>Integrated:</strong> change in one area affects others. <em>Example:</em> when the economy changes and more women work, family structure changes too.</li>
+    </ul>
+    <h4>Sociological perspectives</h4>
+    <ul>
+      <li><strong>Functionalist:</strong> culture maintains social equilibrium and cohesion. Shared values hold society together.</li>
+      <li><strong>Conflict:</strong> culture protects the interests of dominant groups. The <strong>dominant culture</strong> is the most widely accepted and influential culture, reflecting the values of the most powerful. The <strong>dominant ideology</strong> is the set of beliefs that justifies their power.</li>
+      <li><strong>Feminist:</strong> cultural narratives can continue gender inequality, and dominant culture often reinforces gender hierarchies.</li>
+    </ul>
+  </section>
+
+  <section class="blk bd"><span class="pill bd">Bangladesh</span>
+    <p>The <strong>Bangla language</strong>, <strong>Pohela Boishakh</strong> and <strong>Ekushey February</strong> are clear examples. A child of Bangladeshi parents raised in another country will speak that country's language unless Bangla is taught. <em>Why this shows culture is learned:</em> the child's biology is the same, but behaviour depends on the culture in which they grow up. Ekushey also shows the <strong>symbolic</strong> feature: the Shaheed Minar and the language movement stand for identity and sacrifice. Pohela Boishakh shows the <strong>shared</strong> feature, with the whole society celebrating together.</p>
+  </section>
+
+  <section class="blk arg"><span class="pill arg">Argument</span>
+    <p><strong>My position:</strong> Culture is learned, not biological.</p>
+    <ul>
+      <li>People of the same biological background behave very differently in different cultures, so biology alone cannot explain behaviour.</li>
+      <li>Culture changes quickly across generations, which genes cannot do.</li>
+      <li>Children learn language, food habits, dress and values from their surroundings.</li>
+    </ul>
+    <p><strong>Other side:</strong> Humans do have biological needs such as food and shelter. But the way these needs are met (what we eat, how we marry) is cultural.</p>
+  </section>
+
+  <section class="blk con"><span class="pill con">Conclusion</span>
+    <p>Culture is a learned, symbolic, shared and integrated system. Bangla language and festivals show how a people's way of life is passed on by learning.</p>
+  </section>
+  <p class="back"><a href="#top">Back to contents</a></p>
+</article>
+
+<!-- Q12 -->
+<article class="q" id="q12">
+  <div class="qhead"><span class="qn">Q12</span><span class="marks">15 marks</span>
+  <h3>Language and cultural universals. Define the terms, explain with examples why expression varies across cultures, link to Bangladeshi culture and argue whether language shapes thought.</h3></div>
+  <p class="lead">Every culture shares some basic practices, but each expresses them in its own way, and language is a main tool for this.</p>
+  <div class="terms"><span class="lbl">Core words</span><span class="t">language</span><span class="t">Sapir-Whorf hypothesis</span><span class="t">cultural universals</span><span class="t">nonverbal communication</span></div>
+
+  <section class="blk def"><span class="pill def">Definition</span>
+    <ul>
+      <li><strong>Language:</strong> an abstract system of word meanings and symbols for all aspects of culture. It includes speech, writing, numerals, symbols and nonverbal gestures.</li>
+      <li><strong>Sapir-Whorf hypothesis:</strong> language shapes how we interpret reality. People can understand the world only through language, so language comes before thought.</li>
+      <li><strong>Cultural universals:</strong> common practices and beliefs found in all societies. Many are adaptations to meet human needs such as food, shelter and clothing.</li>
+    </ul>
+  </section>
+
+  <section class="blk ex"><span class="pill ex">Example and explanation</span>
+    <p><strong>Language:</strong> Most people in the United States cannot easily make the verbal distinctions about snow and ice that are possible in Sami culture. <em>Why:</em> without the words, they are less likely to notice the differences. Language does not only describe reality, it helps shape it. It can influence how we see, taste, smell, feel and hear, and how we think about people, ideas and objects. Gender-related language also reflects and shapes cultural norms.</p>
+    <p><strong>Universals:</strong> George Murdock listed universals that include athletic sports, cooking, dancing, visiting, personal names, marriage, medicine, religious ritual, funeral ceremonies, sexual restrictions and trade.</p>
+    <p><strong>Why expression varies:</strong> The practice is universal but the form differs. One society lets people choose marriage partners, another encourages marriages arranged by parents. Universals also change over time within a society.</p>
+  </section>
+
+  <section class="blk bd"><span class="pill bd">Bangladesh</span>
+    <ul>
+      <li><strong>Language shows social rank:</strong> Bangla has three levels of "you" (<em>tui, tumi, apni</em>), which show age, respect and closeness. Choosing the wrong one can offend. This shows language carrying cultural norms.</li>
+      <li><strong>Gender in language:</strong> words like "meyeli" (girlish) used to insult a boy show how language reflects attitudes about gender.</li>
+      <li><strong>Marriage:</strong> marriage is a universal, and in Bangladesh it often involves the family and a go-between, though love marriage is growing. This shows the same universal expressed in a local way that is changing.</li>
+    </ul>
+  </section>
+
+  <section class="blk arg"><span class="pill arg">Argument</span>
+    <p><strong>My position:</strong> Language strongly influences thought but does not fully control it.</p>
+    <ul>
+      <li>Words direct attention. People with more words for a thing notice more detail, as in the Sami snow example.</li>
+      <li>Language carries cultural values, like respect levels and gender roles, and teaches them to each generation.</li>
+      <li>But people can think of things they have no word for and then invent new words. Translation between languages is also possible, which a strict reading of "language before thought" cannot explain.</li>
+    </ul>
+  </section>
+
+  <section class="blk con"><span class="pill con">Conclusion</span>
+    <p>Universals show what humans share, and language shows how each culture shapes it. Language guides how we see the world, though it does not lock us inside it.</p>
+  </section>
+  <p class="back"><a href="#top">Back to contents</a></p>
+</article>
+
+<!-- Q13 -->
+<article class="q" id="q13">
+  <div class="qhead"><span class="qn">Q13</span><span class="marks">15 marks</span>
+  <h3>Ethnocentrism versus cultural relativism. Define both, give an example of each, link to Bangladesh and argue whether cultural relativism has limits.</h3></div>
+  <p class="lead">One judges other cultures by our own standards. The other tries to understand them on their own terms.</p>
+  <div class="terms"><span class="lbl">Core words</span><span class="t">ethnocentrism</span><span class="t">cultural relativism</span><span class="t">prejudice</span><span class="t">discrimination</span><span class="t">human rights</span></div>
+
+  <section class="blk def"><span class="pill def">Definition</span>
+    <ul>
+      <li><strong>Ethnocentrism</strong> (term from William Graham Sumner, 1906): the tendency to assume one's own culture is the norm or is superior to others. The ethnocentric person sees other cultures as deviations from what is "normal".</li>
+      <li><strong>Cultural relativism:</strong> the idea that all cultures are equally valid and can be understood only in their own context. Anthropologists use it as a method to avoid ethnocentrism.</li>
+    </ul>
+    <p>Its principles: no culture is superior to another, cultures are coherent systems, and cultures are best understood from an insider's perspective.</p>
+  </section>
+
+  <section class="blk ex"><span class="pill ex">Example and explanation</span>
+    <p><strong>Ethnocentrism:</strong> A person who sees another group's food, dress or marriage customs as "strange" or "backward" without knowing their meaning. It can appear as obvious prejudice and discrimination or as subtle judgment based on norms familiar only to one's group. <em>Why it blocks understanding:</em> the person evaluates the practice by their own rules, not the rules of the culture where it makes sense.</p>
+    <p><strong>Cultural relativism:</strong> An anthropologist studying an unfamiliar ritual asks what it means to the people who perform it before judging it. <em>Why it helps:</em> the researcher sees the logic of the practice within its own culture and avoids unfair conclusions.</p>
+  </section>
+
+  <section class="blk bd"><span class="pill bd">Bangladesh</span>
+    <ul>
+      <li><strong>Ethnocentric:</strong> some people may see eating with the hand as unclean and eating with a spoon as the only proper way, or the opposite. Majority Bengali society may also look down on the customs of indigenous communities such as the Chakma, Marma or Santal as "backward" without understanding their traditions.</li>
+      <li><strong>Relativist:</strong> understanding that eating with the hand is a skilled, culturally meaningful practice, and that indigenous festivals and languages have their own value.</li>
+    </ul>
+  </section>
+
+  <section class="blk arg"><span class="pill arg">Argument</span>
+    <p><strong>My position:</strong> Cultural relativism is a useful method for understanding, but it has limits when practices harm people.</p>
+    <ul>
+      <li>If "all cultures are equally valid" is applied without limit, harmful practices could not be criticised. Child marriage is an example: Bangladesh has legal restrictions on it because of the harm to girls' health and education.</li>
+      <li>Human rights offer a shared standard that applies across cultures.</li>
+      <li>The best approach is to <strong>understand first, judge second</strong>: learn the context, then evaluate by basic human rights, not by one's own habits.</li>
+    </ul>
+    <p><strong>Other side:</strong> Relativism protects minority cultures from being dismissed and prevents the arrogance of ethnocentrism. It is valuable as long as it is not used to excuse harm.</p>
+  </section>
+
+  <section class="blk con"><span class="pill con">Conclusion</span>
+    <p>Ethnocentrism blocks understanding, and relativism promotes it. Relativism works best as a way to understand, combined with respect for human rights.</p>
+  </section>
+  <p class="back"><a href="#top">Back to contents</a></p>
+</article>
+
+<!-- Q14 -->
+<article class="q" id="q14">
+  <div class="qhead"><span class="qn">Q14</span><span class="marks">15 marks</span>
+  <h3>Norms, values and cultural variation. Define the terms, show how values lead to norms and sanctions, explain why subcultures and countercultures arise and argue how norms are changing in Bangladesh.</h3></div>
+  <p class="lead">Values say what is good. Norms say how to act. Sanctions enforce them.</p>
+  <div class="terms"><span class="lbl">Core words</span><span class="t">norms</span><span class="t">formal norms</span><span class="t">informal norms</span><span class="t">values</span><span class="t">sanctions</span><span class="t">subculture</span><span class="t">counterculture</span></div>
+
+  <section class="blk def"><span class="pill def">Definition</span>
+    <ul>
+      <li><strong>Norms:</strong> established standards of behaviour maintained by society. To be significant they must be widely shared and understood.</li>
+      <li><strong>Formal norms:</strong> written down, with strict punishments. Laws are the main example ("governmental social control", Donald Black).</li>
+      <li><strong>Informal norms:</strong> generally understood but not written, such as standards of dress.</li>
+      <li><strong>Sanctions:</strong> penalties and rewards for following or breaking a norm. Positive sanctions include a raise, a medal or praise.</li>
+      <li><strong>Values:</strong> collective ideas of what is good, desirable and proper, or bad and improper.</li>
+      <li><strong>Subculture:</strong> a segment of society with a distinct pattern of customs, rules and traditions.</li>
+      <li><strong>Counterculture:</strong> a subculture that deliberately opposes parts of the larger culture.</li>
+    </ul>
+  </section>
+
+  <section class="blk ex"><span class="pill ex">Example and explanation</span>
+    <p><strong>Norm types:</strong> Parking rules and the rules of a football game are formal norms. Wearing inappropriate clothing to school or work breaks an informal norm. There is no written punishment, but laughter or disapproval is the usual sanction.</p>
+    <p><strong>Values lead to norms and sanctions:</strong> If a culture places a high value on marriage, it will likely have strict norms against adultery and make divorce difficult. If a culture values private property, it will have strong laws against theft and vandalism. <em>Why:</em> values are the beliefs, norms are the rules made from them and sanctions keep people following them. Values are not shared by everyone equally, and they change slowly.</p>
+    <p><strong>Cultural variation:</strong> Even with cultural universals, cultures differ because of climate, technology, population and geography. Inside one nation, groups develop patterns that differ from the dominant society. These are <strong>subcultures</strong>. When a subculture openly opposes parts of the dominant culture, it becomes a <strong>counterculture</strong>. Countercultures usually thrive among the young, who have the least investment in the existing culture. A 20-year-old adjusts to new standards more easily than someone who has followed the dominant culture for 60 years.</p>
+  </section>
+
+  <section class="blk bd"><span class="pill bd">Bangladesh</span>
+    <p>Informal norms about dress, speech, women working outside the home, and choosing a partner are changing. Many young people form subcultures around music bands, gaming, campus groups or online communities. The common informal sanction is social pressure, such as "what will people say?", which can be strong in close communities.</p>
+  </section>
+
+  <section class="blk arg"><span class="pill arg">Argument</span>
+    <p><strong>My position:</strong> Norms in Bangladesh are changing, mainly because of education, urban life and global media, but the change is uneven and often contested.</p>
+    <ul>
+      <li>More women study and work, which changes older norms about roles and dress.</li>
+      <li>Social media spreads new styles and ideas quickly, so youth subcultures grow.</li>
+      <li>But older generations often defend traditional norms, and informal sanctions like gossip and family pressure slow the change.</li>
+    </ul>
+    <p><strong>Other side:</strong> Core values such as respect for elders and family loyalty remain strong. So it is norms and expressions that change faster than deep values.</p>
+  </section>
+
+  <section class="blk con"><span class="pill con">Conclusion</span>
+    <p>Values shape norms, and sanctions enforce them. In Bangladesh, young people are creating subcultures and reshaping norms while deeper values change more slowly.</p>
+  </section>
+  <p class="back"><a href="#top">Back to contents</a></p>
+</article>
+
+<!-- Q15 -->
+<article class="q" id="q15">
+  <div class="qhead"><span class="qn">Q15</span><span class="marks">15 marks</span>
+  <h3>Culture changes through innovation and globalisation. Define the terms, give examples, show how global culture meets Bangladeshi tradition and argue whether globalisation erodes culture or creates exchange and growth.</h3></div>
+  <p class="lead">Cultures change in two main ways: new things are created inside, and things spread in from outside.</p>
+  <div class="terms"><span class="lbl">Core words</span><span class="t">innovation</span><span class="t">discovery</span><span class="t">invention</span><span class="t">cultural diffusion</span><span class="t">globalisation</span><span class="t">cultural homogenisation</span><span class="t">cultural imperialism</span></div>
+
+  <section class="blk def"><span class="pill def">Definition</span>
+    <ul>
+      <li><strong>Innovation:</strong> introducing a new idea or object to a culture. <strong>Discovery</strong> means sharing a new reality that already existed. <strong>Invention</strong> means combining existing cultural items into something new.</li>
+      <li><strong>Cultural diffusion:</strong> the spread of cultural elements from one society to another.</li>
+      <li><strong>Globalisation:</strong> increasing interconnection and interdependence among countries.</li>
+      <li><strong>Cultural homogenisation:</strong> the blending of cultures into a more uniform global culture.</li>
+    </ul>
+  </section>
+
+  <section class="blk ex"><span class="pill ex">Example and explanation</span>
+    <ul>
+      <li><strong>Discovery:</strong> the discovery of the structure of DNA, or of a new moon of Saturn. <em>Why:</em> it adds new knowledge to culture.</li>
+      <li><strong>Invention:</strong> the bow and arrow, the automobile, television, Protestantism and democracy. <em>Why:</em> each combined existing ideas or items into a new form.</li>
+      <li><strong>Diffusion:</strong> fast-food chains, social media trends, fashion and music spread across borders. <em>Why:</em> globalisation and technology make the spread faster.</li>
+    </ul>
+    <p><strong>Challenges of globalisation:</strong> cultural erosion, cultural imperialism (one powerful culture dominating others) and resistance. <strong>Opportunities:</strong> cultural exchange, innovation and economic growth.</p>
+  </section>
+
+  <section class="blk bd"><span class="pill bd">Bangladesh</span>
+    <p>Young people in Bangladesh watch K-dramas, Hollywood and Bollywood films, use global social media and eat at international fast-food chains. At the same time, traditions stay strong. Pohela Boishakh is celebrated by large crowds with traditional dress and food, and the Mangal Shobhajatra procession was recognised by UNESCO as intangible cultural heritage in 2016. Fusion is common too, with traditional music mixed with modern styles. <em>What this shows:</em> global and local culture exist together, and people often blend them.</p>
+  </section>
+
+  <section class="blk arg"><span class="pill arg">Argument</span>
+    <p><strong>My position:</strong> Globalisation brings both risks and benefits. In Bangladesh, it has so far created more exchange than erosion, but it needs care.</p>
+    <ul>
+      <li><strong>Risk:</strong> powerful foreign media and brands can push local language, dress and food into the background, especially among children who grow up mostly online.</li>
+      <li><strong>Benefit:</strong> new ideas, jobs, technology and creative work come through global links, such as online freelancing and the export economy.</li>
+      <li><strong>Evidence of resilience:</strong> local festivals and language are strong and still growing in public life.</li>
+    </ul>
+    <p><strong>Conflict view:</strong> Critics note that the flow is not equal, because wealthy countries produce most global media. This is why cultural imperialism is a real concern.</p>
+  </section>
+
+  <section class="blk con"><span class="pill con">Conclusion</span>
+    <p>Culture changes through innovation and diffusion. Globalisation can erode or enrich a culture, and the result depends on whether people keep and renew their own traditions while taking in new ones.</p>
+  </section>
+  <p class="back"><a href="#top">Back to contents</a></p>
+</article>
+
+<footer>Built from your lecture slides: Social Stratification, Class and Social Mobility; Socialisation; Culture. Bangladesh points are general examples to support your argument.</footer>
+
+</div>
+
+</body></html>
