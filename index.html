@@ -118,13 +118,27 @@ footer { margin-top: 64px; padding-top: 16px; border-top: 1px solid var(--line);
 .bn-k { font-weight: 600; color: var(--accent); }
 .bn-pattern { margin-top: 12px; padding-top: 10px; border-top: 1px dashed var(--line); color: var(--muted); font-size: 0.95rem; }
 .bn strong { color: var(--ink); font-weight: 600; }
+
+/* extra question marker, toc tag, more-terms box */
+.extra { font-size: 0.72rem; font-weight: 600; letter-spacing: 0.06em; text-transform: uppercase; color: var(--arg); background: var(--arg-tint); padding: 3px 10px; border-radius: 999px; }
+.tag { font-style: normal; font-size: 0.68rem; font-weight: 600; letter-spacing: 0.05em; text-transform: uppercase; color: var(--arg); margin-left: 4px; }
+.toc-more { margin: 14px 0 0; font-size: 0.9rem; }
+.more { margin-top: 64px; padding-top: 20px; border-top: 2px solid var(--ink); scroll-margin-top: 16px; }
+.more h2 { font-size: clamp(1.3rem, 3.5vw, 1.7rem); }
+.more-sub { color: var(--muted); margin: 6px 0 16px; font-size: 0.95rem; }
+.more-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(230px, 1fr)); gap: 16px; }
+.more-grid > div { border: 1px solid var(--line); border-radius: 10px; padding: 14px 16px; min-width: 0; }
+.more h3 { font-size: 0.85rem; color: var(--muted); letter-spacing: 0.06em; text-transform: uppercase; margin-bottom: 8px; }
+.more dl { margin: 0; display: grid; gap: 8px; }
+.more dt { font-weight: 600; font-size: 0.92rem; line-height: 1.4; }
+.more dd { margin: 0; font-size: 0.88rem; line-height: 1.55; color: var(--muted); }
 </style>
 
 <div class="wrap" id="top">
 
 <header class="top">
-  <h1>Sociology: 15 Model Answers</h1>
-  <p class="sub">Introduction to Sociology. Stratification, Socialisation and Culture. Each answer is written for 15 marks in the order Definition, Example with explanation, Argument.</p>
+  <h1>Sociology: 18 Model Answers</h1>
+  <p class="sub">Introduction to Sociology. Stratification, Socialisation and Culture. Each answer is written for 15 marks in the order Definition, Example with explanation, Argument. Checked against your three Schaefer chapters, with one extra question added for each chapter (Q16, Q17, Q18).</p>
   <div class="howto">
     <h2>How to use these in the exam</h2>
     <ol>
@@ -134,6 +148,7 @@ footer { margin-top: 64px; padding-top: 16px; border-top: 1px solid var(--line);
       <li><strong>Conclusion</strong> (about 2 marks): finish in two sentences.</li>
     </ol>
     <p>প্রতিটি প্রশ্নের নিচে <strong>বাংলায় প্রশ্নের ব্যাখ্যা</strong> আছে। আগে সেটা পড়ে বুঝে নাও প্রশ্নটা কী চাইছে, তারপর ইংরেজি উত্তরটা পড়ো।</p>
+    <p>Questions marked <strong>Extra from the book</strong> cover important topics in your textbook that the first 15 did not. Each has the same Bangla breakdown.</p>
     <p>The mark split is a guide, not a rule. Use your own words once you understand an answer. Examiners reward understanding, not copied lines.</p>
     <div class="legend">
       <span class="pill def">Definition</span>
@@ -156,6 +171,7 @@ footer { margin-top: 64px; padding-top: 16px; border-top: 1px solid var(--line);
         <li><a href="#q3"><span class="n">Q3</span>Marx and Weber</a></li>
         <li><a href="#q4"><span class="n">Q4</span>Three perspectives on stratification</a></li>
         <li><a href="#q5"><span class="n">Q5</span>Poverty and social mobility</a></li>
+        <li><a href="#q16"><span class="n">Q16</span>Poverty and life chances <em class="tag">extra</em></a></li>
       </ol>
     </div>
     <div class="toc-set">
@@ -166,6 +182,7 @@ footer { margin-top: 64px; padding-top: 16px; border-top: 1px solid var(--line);
         <li><a href="#q8"><span class="n">Q8</span>Goffman's performance</a></li>
         <li><a href="#q9"><span class="n">Q9</span>Agents of socialisation</a></li>
         <li><a href="#q10"><span class="n">Q10</span>Socialisation and the life course</a></li>
+        <li><a href="#q17"><span class="n">Q17</span>Nature versus nurture <em class="tag">extra</em></a></li>
       </ol>
     </div>
     <div class="toc-set">
@@ -176,9 +193,11 @@ footer { margin-top: 64px; padding-top: 16px; border-top: 1px solid var(--line);
         <li><a href="#q13"><span class="n">Q13</span>Ethnocentrism and relativism</a></li>
         <li><a href="#q14"><span class="n">Q14</span>Norms, values, subculture</a></li>
         <li><a href="#q15"><span class="n">Q15</span>Culture change and globalisation</a></li>
+        <li><a href="#q18"><span class="n">Q18</span>Language policy and bilingualism <em class="tag">extra</em></a></li>
       </ol>
     </div>
   </div>
+  <p class="toc-more"><a href="#more-terms">More book terms to know</a></p>
 </nav>
 
 <!-- ============ SET A ============ -->
@@ -261,8 +280,8 @@ footer { margin-top: 64px; padding-top: 16px; border-top: 1px solid var(--line);
   </section>
 
   <section class="blk ex"><span class="pill ex">Example and explanation</span>
-    <p><strong>Slavery:</strong> In ancient Greece people became slaves through war or conquest, and some could gain freedom. In the U.S. and Latin America slavery was based on race, so it was nearly impossible to change status. <em>Why this matters:</em> racial slavery made status permanent, and racial inequality continued after abolition through segregation and discrimination.</p>
-    <p><strong>Caste:</strong> In India people were born into castes. The Dalits, the lowest group, faced severe discrimination and exclusion. India officially banned caste discrimination in 1950, but caste-based inequality still exists in some places.</p>
+    <p><strong>Slavery:</strong> In ancient Greece people became slaves mainly through piracy and war, and slave status was not always permanent. In the U.S. and Latin America slavery was based on race, so it was nearly impossible to change status. <em>Why this matters:</em> racial slavery made status permanent, and racial inequality continued after abolition through segregation and discrimination.</p>
+    <p><strong>Caste:</strong> In India people were born into castes. The Dalits (the former "untouchables", about 16 percent of India's population in your textbook) sit outside the four main varnas and faced severe discrimination and exclusion. India officially banned caste discrimination in 1950, but caste-based inequality still exists in some places.</p>
     <p><strong>Estate:</strong> In medieval feudal society nobles owned the land, and that gave them higher status than peasants.</p>
     <p><strong>Class:</strong> People are often born into a class but can move through education or a better job, although moving is hard.</p>
     <p><strong>Key comparison:</strong> Slavery removes all rights, while caste keeps people in fixed positions. Both are <strong>closed systems</strong> because they depend on ascribed status. Class is the most <strong>open system</strong> because achieved status can change position.</p>
@@ -275,7 +294,7 @@ footer { margin-top: 64px; padding-top: 16px; border-top: 1px solid var(--line);
   <section class="blk arg"><span class="pill arg">Argument</span>
     <p><strong>My position:</strong> Slavery and caste have been abolished by law, but their modern forms still exist.</p>
     <ul>
-      <li><strong>Modern slavery</strong> appears as human trafficking, forced labour and debt bondage, where people cannot leave their work.</li>
+      <li><strong>Modern slavery</strong> appears as human trafficking, forced labour and debt bondage, where people cannot leave their work. Your textbook says the Universal Declaration of Human Rights bans slavery, yet more people are enslaved today than at any point in history (it quotes an estimate of about 29.8 million).</li>
       <li><strong>Caste-type discrimination</strong> continues in South Asia, including against Dalit communities. In Bangladesh, groups such as the Harijan (sweeper) communities face exclusion in housing, jobs and social respect.</li>
     </ul>
     <p><strong>Other side:</strong> Legally, these systems no longer exist as official structures, and open class systems give far more freedom. But a law ending a system does not instantly end the beliefs behind it.</p>
@@ -430,7 +449,7 @@ footer { margin-top: 64px; padding-top: 16px; border-top: 1px solid var(--line);
       <li><strong>Social mobility:</strong> movement of individuals or groups between positions in society.</li>
       <li><strong>Open system:</strong> position depends on achievement. <strong>Closed system:</strong> position depends on ascribed traits, such as slavery or caste.</li>
     </ul>
-    <p class="note">Your lecture uses the World Bank's $1.25 per day line as the example. The exact line has been updated over time, so write "a World Bank poverty line" if you are unsure of the current figure.</p>
+    <p class="note">Your lecture uses $1.25 a day. Your textbook (Schaefer) quotes the World Bank's $2 a day for the developing world, about 1 billion people (2015 data). These lines are updated over time, so write "a World Bank poverty line" and give the figure your teacher used.</p>
   </section>
 
   <section class="blk ex"><span class="pill ex">Example and explanation</span>
@@ -461,6 +480,60 @@ footer { margin-top: 64px; padding-top: 16px; border-top: 1px solid var(--line);
 
   <section class="blk con"><span class="pill con">Conclusion</span>
     <p>Education opens the door, but fair access, good quality and equal job opportunity are needed to walk through it. Breaking the poverty cycle needs education together with structural change.</p>
+  </section>
+  <p class="back"><a href="#top">Back to contents</a></p>
+</article>
+
+<!-- Q16 -->
+<article class="q" id="q16">
+  <div class="qhead"><span class="qn">Q16</span><span class="marks">15 marks</span><span class="extra">Extra from the book</span>
+  <h3>Poverty and life chances. Define the key terms, explain who the poor are and why poverty continues, show how class affects life chances, link to Bangladesh and argue whether poverty is caused by individuals or by society.</h3></div>
+  <p class="lead">This covers the parts of the chapter that Q5 did not: Weber's life chances, the feminization of poverty, the underclass and Gans's functionalist view of the poor.</p>
+
+  <div class="terms"><span class="lbl">Core words</span><span class="t">life chances</span><span class="t">feminization of poverty</span><span class="t">underclass</span><span class="t">relative poverty</span><span class="t">precarious work</span><span class="t">blaming the victim</span></div>
+
+  <section class="bn" lang="bn"><span class="pill bn-pill">বাংলায় প্রশ্নের ব্যাখ্যা</span>
+    <p class="bn-intro"><strong>প্রশ্নটা কী চাইছে?</strong> গরিব মানুষ কারা, দারিদ্র্য কেন টিকে থাকে, শ্রেণি কীভাবে মানুষের জীবনের সুযোগ (life chances) ঠিক করে, বাংলাদেশের উদাহরণ এবং দারিদ্র্যের জন্য ব্যক্তি নাকি সমাজ দায়ী, তা নিয়ে যুক্তি।</p>
+    <div class="bn-row"><span class="bn-k">(ক)</span><p><strong>সংজ্ঞা:</strong> Life chances = জীবনে ভালো বাসস্থান, শিক্ষা, স্বাস্থ্য ও অভিজ্ঞতা পাওয়ার সুযোগ (ওয়েবার)। Feminization of poverty = গরিবদের মধ্যে নারীর অনুপাত বাড়তে থাকা। Underclass = দীর্ঘমেয়াদি গরিব, যাদের দক্ষতা ও প্রশিক্ষণ নেই (উইলিয়াম জুলিয়াস উইলসন)।</p></div>
+    <div class="bn-row"><span class="bn-k">(খ)</span><p><strong>উদাহরণ ও কেন:</strong> টাইটানিক ডুবির সময় প্রথম শ্রেণির যাত্রীদের প্রায় ৬২% বেঁচেছিল, তৃতীয় শ্রেণির মাত্র ২৫%। এতে বোঝা যায় শ্রেণি জীবন-মৃত্যুর সুযোগও ঠিক করে। গ্যান্স (Gans) বলেন দারিদ্র্য সমাজের কিছু অংশের উপকার করে, যেমন কম মজুরিতে নোংরা বা বিপজ্জনক কাজ করানো যায়।</p></div>
+    <div class="bn-row"><span class="bn-k">(গ)</span><p><strong>বাংলাদেশ:</strong> বইয়ের হামিদ ও খাদিজার গল্প দাও। গ্রাম থেকে ঢাকার বস্তিতে এসে রিকশাচালক হওয়া, অনিয়মিত আয়, তবু ধান্দায় সঞ্চয় ও ধার (মুষ্টি চাল)। এটা দেখায় গরিবরা অলস নয়, কাঠামো তাদের আটকে রাখে।</p></div>
+    <div class="bn-row"><span class="bn-k">(ঘ)</span><p><strong>যুক্তি:</strong> দারিদ্র্যের প্রধান কারণ সমাজের কাঠামো (কাজের সুযোগ, শিক্ষা, বৈষম্য), শুধু ব্যক্তির দোষ নয়। উল্টো পক্ষে বলো, ব্যক্তির সিদ্ধান্তও কিছুটা ভূমিকা রাখে।</p></div>
+    <p class="bn-pattern"><strong>উত্তর সাজানোর নিয়ম:</strong> সংজ্ঞা, তারপর উদাহরণ ও কেন, তারপর যুক্তি, শেষে ২ লাইনের উপসংহার।</p>
+  </section>
+
+  <section class="blk def"><span class="pill def">Definition</span>
+    <ul>
+      <li><strong>Life chances</strong> (Weber): a person's opportunities to get material goods, good living conditions and favourable life experiences, such as housing, education and health.</li>
+      <li><strong>Feminization of poverty:</strong> a trend in which women make up a growing share of the poor.</li>
+      <li><strong>Underclass</strong> (William Julius Wilson): the long-term poor who lack the training and skills to lift themselves out of poverty.</li>
+      <li><strong>Precarious work:</strong> employment that is poorly paid and, from the worker's view, insecure and unprotected.</li>
+    </ul>
+  </section>
+
+  <section class="blk ex"><span class="pill ex">Example and explanation</span>
+    <p><strong>Who are the poor?</strong> Many people imagine the poor as people who will not work. In fact many poor adults do work, often in low-paid or insecure jobs. <em>Why this matters:</em> the stereotype leads to wrong ideas about how to reduce poverty. The poor are also not one fixed group, because some families move just above or below the line each year, while others stay poor for many years.</p>
+    <p><strong>Feminization of poverty:</strong> More poor households are headed by women, often divorced, widowed or never-married mothers. Conflict theorists point to three reasons: difficulty finding affordable child care, sexual harassment and sex discrimination in the labour market.</p>
+    <p><strong>Underclass:</strong> People living in extremely poor neighbourhoods face limited schooling, more exposure to crime and health risks, little investment and higher prices. Past and present discrimination makes it harder to escape.</p>
+    <p><strong>Why poverty continues (Gans, a functionalist view):</strong> poverty performs useful functions for the non-poor. The poor do dirty, dangerous and low-paid work. Poverty creates jobs for people who serve the poor (social workers, public health staff). Punishing the poor as deviants upholds mainstream values such as hard work and thrift. Their low position keeps the status of the rich higher, and the rich may justify inequality by <em>blaming the victim</em>. Because the poor have little power, they also absorb the costs of social change.</p>
+    <p><strong>Life chances:</strong> In the 1912 Titanic disaster, about 62 percent of first-class passengers survived, against about 25 percent of third-class passengers. When Hurricane Katrina hit, people without cars could not leave. <em>Why:</em> class position affects who gets safety, not only comfort.</p>
+  </section>
+
+  <section class="blk bd"><span class="pill bd">Bangladesh</span>
+    <p>Your textbook opens its global inequality chapter with a Bangladeshi couple, <strong>Hamid and Khadeja</strong>. They moved from a poor coastal village to a Dhaka slum. Hamid worked as a rickshaw puller and construction labourer, and his income was unpredictable, around $0.78 per person per day. Yet they still saved a little, borrowed and kept back a fistful of rice each meal (<em>musti chaul</em>) for lean times. <em>Why this is a good example:</em> it shows the poor are active money managers, not lazy, and that insecure work, not lack of effort, keeps them poor. It also matches the idea of an urban underclass, because slum life limits schooling and health. Women's unpaid housework and lower-paid work link to the feminization of poverty.</p>
+  </section>
+
+  <section class="blk arg"><span class="pill arg">Argument</span>
+    <p><strong>My position:</strong> Poverty is mainly caused by social structure, not by the poor themselves.</p>
+    <ul>
+      <li>Poor people in Bangladesh and elsewhere work hard but face insecure jobs and low pay.</li>
+      <li>Weak schools, poor health care and discrimination limit life chances from birth.</li>
+      <li>Some groups gain from cheap labour, so society has little push to remove poverty (Gans).</li>
+    </ul>
+    <p><strong>Other side:</strong> Personal choices, such as dropping out of school or not saving, can matter. But blaming the victim ignores the limits the poor face.</p>
+  </section>
+
+  <section class="blk con"><span class="pill con">Conclusion</span>
+    <p>Class shapes life chances, and poverty continues partly because parts of society benefit from it. Reducing poverty needs structural change, such as secure jobs and fair access to schooling, not only advice to individuals.</p>
   </section>
   <p class="back"><a href="#top">Back to contents</a></p>
 </article>
@@ -553,8 +626,8 @@ footer { margin-top: 64px; padding-top: 16px; border-top: 1px solid var(--line);
     <h4>Mead's three stages</h4>
     <ul>
       <li><strong>Preparatory stage:</strong> children imitate people around them, often family. This builds the base for symbols and language.</li>
-      <li><strong>Play stage:</strong> children pretend to be others (doctor, superhero) and learn that other people have roles and views.</li>
-      <li><strong>Game stage:</strong> children understand many roles and social rules at once and see their own place in society.</li>
+      <li><strong>Play stage:</strong> children pretend to be others (doctor, superhero) and learn that other people have roles and views. Mead calls this <strong>role taking</strong>: mentally assuming another person's viewpoint and responding from it.</li>
+      <li><strong>Game stage:</strong> children (around age 8 or 9) understand many roles and social rules at once and see their own place in society, as players in a team game must know everyone's position.</li>
     </ul>
     <p><em>Example:</em> A child playing "teacher" learns what a teacher does, but only in the game stage understands how teachers, students and principals relate in a school. <em>Generalised other example:</em> a child first says "thank you" because parents instruct them. Later the child sees that politeness is a wider social expectation and acts politely because they understand its social meaning.</p>
     <h4>Comparison</h4>
@@ -601,6 +674,7 @@ footer { margin-top: 64px; padding-top: 16px; border-top: 1px solid var(--line);
 
   <section class="blk def"><span class="pill def">Definition</span>
     <ul>
+      <li><strong>Dramaturgical approach (Goffman, 1959):</strong> social life is like theatre, so people act as performers in front of an audience.</li>
       <li><strong>Roles and performance:</strong> we play different roles in different settings, such as professional at work and casual with friends.</li>
       <li><strong>Impression management:</strong> adjusting our behaviour to shape how others see us.</li>
       <li><strong>Face-work:</strong> protecting our dignity and "saving face" in interactions.</li>
@@ -719,6 +793,7 @@ footer { margin-top: 64px; padding-top: 16px; border-top: 1px solid var(--line);
       <li><strong>Anticipatory socialisation:</strong> preparation for future roles such as a career or parenthood.</li>
       <li><strong>Resocialisation:</strong> unlearning old behaviours and adopting new ones, often in total institutions like the military.</li>
       <li><strong>Life course:</strong> the stages from birth to death (childhood, adolescence, adulthood, old age).</li>
+      <li><strong>Total institution (Goffman, 1961):</strong> an institution that controls all parts of a person's life under one authority, such as a prison, the military, a mental hospital or a convent.</li>
     </ul>
   </section>
 
@@ -727,9 +802,9 @@ footer { margin-top: 64px; padding-top: 16px; border-top: 1px solid var(--line);
       <li><strong>Primary:</strong> a toddler learns language and basic manners from parents. <em>Why:</em> this is the first and deepest learning.</li>
       <li><strong>Secondary:</strong> a student learns classroom rules, or a new employee learns office behaviour. <em>Why:</em> each group has its own expected conduct.</li>
       <li><strong>Anticipatory:</strong> a final-year student takes internships and practises interviews to prepare for work. <em>Why:</em> they are learning the role before they hold it.</li>
-      <li><strong>Resocialisation:</strong> a recruit entering the military gives up civilian habits and adopts strict discipline. <em>Why:</em> the institution deliberately replaces old behaviour.</li>
+      <li><strong>Resocialisation:</strong> a recruit entering the military gives up civilian habits and adopts strict discipline. <em>Why:</em> the institution deliberately replaces old behaviour. A <strong>degradation ceremony</strong> (losing clothes, hair and privacy) strips away the old identity.</li>
     </ul>
-    <p><strong>Life course events</strong> such as starting school, graduating, marriage and retirement mark changes in status. Moments like losing a job or the birth of a child trigger major change. Some societies mark stages with formal rites of passage. People also experience the same event differently at different points in life.</p>
+    <p><strong>Life course events</strong> such as starting school, graduating, marriage and retirement mark changes in status. Moments like losing a job or the birth of a child trigger major change. Some societies mark stages with formal rites of passage. Later transitions include the <strong>midlife crisis</strong> (self-evaluation around age 40), the <strong>sandwich generation</strong> (adults caring for children and ageing parents at once) and retirement, which your textbook treats as a rite of passage with phases (Atchley). People also experience the same event differently at different points in life.</p>
   </section>
 
   <section class="blk bd"><span class="pill bd">Bangladesh</span>
@@ -748,6 +823,65 @@ footer { margin-top: 64px; padding-top: 16px; border-top: 1px solid var(--line);
 
   <section class="blk con"><span class="pill con">Conclusion</span>
     <p>Socialisation starts in the family but continues through the whole life course, because every new role comes with new expectations.</p>
+  </section>
+  <p class="back"><a href="#top">Back to contents</a></p>
+</article>
+
+<!-- Q17 -->
+<article class="q" id="q17">
+  <div class="qhead"><span class="qn">Q17</span><span class="marks">15 marks</span><span class="extra">Extra from the book</span>
+  <h3>Nature versus nurture. Define the debate, use the studies on isolation and twins as evidence, link to Bangladesh and argue whether heredity or environment shapes a person more.</h3></div>
+  <p class="lead">This opens the chapter on the role of socialisation and is a very common exam question. It asks what makes us who we are: our genes or our surroundings.</p>
+
+  <div class="terms"><span class="lbl">Core words</span><span class="t">nature versus nurture</span><span class="t">heredity</span><span class="t">environment</span><span class="t">socialisation</span><span class="t">personality</span><span class="t">social isolation</span></div>
+
+  <section class="bn" lang="bn"><span class="pill bn-pill">বাংলায় প্রশ্নের ব্যাখ্যা</span>
+    <p class="bn-intro"><strong>প্রশ্নটা কী চাইছে?</strong> মানুষ কেমন হয় তা জন্মগত বৈশিষ্ট্য (heredity) থেকে, নাকি পরিবেশ ও সামাজিকীকরণ থেকে, এই বিতর্ক ব্যাখ্যা করতে হবে। বইয়ের গবেষণা প্রমাণ হিসেবে দিতে হবে, বাংলাদেশের সাথে মিলাতে হবে এবং নিজের অবস্থান নিয়ে যুক্তি দিতে হবে।</p>
+    <div class="bn-row"><span class="bn-k">(ক)</span><p><strong>সংজ্ঞা:</strong> Nature versus nurture = heredity versus environment বিতর্ক। Socialisation = মানুষ সমাজের মনোভাব, মূল্যবোধ ও আচরণ শেখার প্রক্রিয়া। Personality = একজনের চিন্তা, চাহিদা ও আচরণের স্বভাবগত ধরন।</p></div>
+    <div class="bn-row"><span class="bn-k">(খ)</span><p><strong>উদাহরণ ও কেন:</strong> (১) <em>Isabelle:</em> ছয় বছর অন্ধকার ঘরে বন্দি ছিল, কথা বলতে পারত না, কিন্তু প্রশিক্ষণ পেয়ে দ্রুত শিখল। (২) <em>রোমানিয়ার অনাথ শিশু:</em> যত্ন ও কথাবার্তার অভাবে ক্ষতি হয়। (৩) <em>হারলোর বানর:</em> একা বড় হওয়া বানর ভীত ও অসামাজিক হয়। (৪) <em>যমজ ভাই Oskar ও Jack:</em> আলাদা পরিবেশে বড় হলেও কিছু অভ্যাস মিলল, কিন্তু মতামত ও মূল্যবোধ আলাদা হলো। এতে বোঝা যায় দুটোই প্রভাব ফেলে।</p></div>
+    <div class="bn-row"><span class="bn-k">(গ)</span><p><strong>বাংলাদেশ:</strong> বইয়ে বাংলাদেশের নির্দিষ্ট কেস নেই, তাই নিজের যুক্তিতে লেখো। যেমন যত্ন ও কথাবার্তা পাওয়া শিশু আর অবহেলিত বা প্রতিষ্ঠানে বড় হওয়া শিশুর পার্থক্য।</p></div>
+    <div class="bn-row"><span class="bn-k">(ঘ)</span><p><strong>যুক্তি:</strong> দুটোই কাজ করে, তবে সামাজিক পরিবেশ ছাড়া মানুষ ভাষা ও সম্পর্ক শিখতে পারে না। তাই পরিবেশের ভূমিকা অপরিহার্য। উল্টো পক্ষে যমজদের সাদৃশ্য দেখাও।</p></div>
+    <p class="bn-pattern"><strong>উত্তর সাজানোর নিয়ম:</strong> সংজ্ঞা, তারপর উদাহরণ ও কেন, তারপর যুক্তি, শেষে ২ লাইনের উপসংহার।</p>
+  </section>
+
+  <section class="blk def"><span class="pill def">Definition</span>
+    <ul>
+      <li><strong>Nature versus nurture</strong> (heredity versus environment): the debate over whether biological inheritance or the social environment matters more in human development. Most social scientists now study how the two <em>interact</em>.</li>
+      <li><strong>Socialisation:</strong> the lifelong process in which people learn the attitudes, values and behaviours appropriate for members of a culture.</li>
+      <li><strong>Personality:</strong> a person's typical patterns of attitudes, needs, characteristics and behaviour.</li>
+    </ul>
+  </section>
+
+  <section class="blk ex"><span class="pill ex">Example and explanation</span>
+    <h4>Evidence for the environment</h4>
+    <ul>
+      <li><strong>Isabelle:</strong> She lived in a darkened room with her deaf-mute mother until age six, and could not speak when found. With systematic training she reached normal levels within a few years, and by 14 she was in sixth grade. <em>Why it matters:</em> her physical and mental potential was there, but without early social contact she could not communicate. All children need love, care and interaction.</li>
+      <li><strong>Romanian orphans:</strong> Babies in orphanages lay in cribs 18 to 20 hours a day with little adult attention. Many became fearful of human contact and had adjustment problems after adoption. <em>Why:</em> physical care is not enough, children also need social and emotional development.</li>
+      <li><strong>Harlow's monkeys:</strong> Rhesus monkeys raised away from other monkeys were fearful and frightened. The baby monkeys clung to a cloth "mother" rather than a wire one that gave milk. <em>Why:</em> they needed warmth and comfort, not only food.</li>
+    </ul>
+    <h4>Evidence for heredity (and its limits)</h4>
+    <ul>
+      <li><strong>Twins reared apart (Oskar and Jack):</strong> One was raised as a Catholic in Nazi Germany, the other as a Jew in Trinidad and Israel. Yet both wore wire-rimmed glasses, liked spicy foods and flushed the toilet before using it. But their politics, attitudes to women and feelings about being Jewish were very different. The Minnesota Twin Family Study found temperament and voice patterns similar, while attitudes, values and chosen mates differed more.</li>
+      <li><strong>Caution:</strong> Critics say twin studies often use small samples and may not fully rule out contact between the twins.</li>
+    </ul>
+  </section>
+
+  <section class="blk bd"><span class="pill bd">Bangladesh</span>
+    <p>Your book has no Bangladeshi case study here, so use this as your own reasoning. Two Bangladeshi children may have a similar inherited ability. A child who grows up with talking, play, stories and school will develop language and confidence. A child neglected in a crowded institution or left without regular care may fall behind, as the Romanian orphans did. The extended family, neighbours and peers often add contact, which supports the point that social interaction is essential. The book also notes about 2 million children worldwide live in institutional care, and UNICEF supports placing them with families.</p>
+  </section>
+
+  <section class="blk arg"><span class="pill arg">Argument</span>
+    <p><strong>My position:</strong> Both matter, but the social environment is the more decisive because heredity alone cannot make a person social.</p>
+    <ul>
+      <li>Isabelle and the orphans show that without interaction even normal potential does not develop into language, trust or social skills.</li>
+      <li>Twins show heredity affects temperament and habits, but values, attitudes and choices change with the environment.</li>
+      <li>Genes give a starting range, and socialisation decides how it is used.</li>
+    </ul>
+    <p><strong>Other side:</strong> Sociobiologists and twin studies suggest genes have real influence. But the evidence is limited by small samples, so the safest view is interaction.</p>
+  </section>
+
+  <section class="blk con"><span class="pill con">Conclusion</span>
+    <p>Heredity and environment work together. The cases of isolated children prove that human development depends on social contact, which is why socialisation is central to sociology.</p>
   </section>
   <p class="back"><a href="#top">Back to contents</a></p>
 </article>
@@ -772,7 +906,7 @@ footer { margin-top: 64px; padding-top: 16px; border-top: 1px solid var(--line);
   </section>
 
   <section class="blk def"><span class="pill def">Definition</span>
-    <p><strong>Culture</strong> is an all-encompassing system that shapes the way of life for a group of people. It includes language, customs, beliefs, rituals and ways of understanding the world. Tylor (1871) defined it as the complex whole that includes knowledge, belief, arts, morals, law, custom and other capabilities acquired by a person as a member of society.</p>
+    <p><strong>Culture</strong> is the totality of learned, socially transmitted customs, knowledge, material objects and behaviour (your textbook's definition). It is an all-encompassing system that shapes the way of life for a group of people. It includes language, customs, beliefs, rituals and ways of understanding the world. Tylor (1871) defined it as the complex whole that includes knowledge, belief, arts, morals, law, custom and other capabilities acquired by a person as a member of society.</p>
   </section>
 
   <section class="blk ex"><span class="pill ex">Example and explanation</span>
@@ -789,6 +923,7 @@ footer { margin-top: 64px; padding-top: 16px; border-top: 1px solid var(--line);
       <li><strong>Functionalist:</strong> culture maintains social equilibrium and cohesion. Shared values hold society together.</li>
       <li><strong>Conflict:</strong> culture protects the interests of dominant groups. The <strong>dominant culture</strong> is the most widely accepted and influential culture, reflecting the values of the most powerful. The <strong>dominant ideology</strong> is the set of beliefs that justifies their power.</li>
       <li><strong>Feminist:</strong> cultural narratives can continue gender inequality, and dominant culture often reinforces gender hierarchies.</li>
+      <li><strong>Interactionist:</strong> culture is kept alive and redefined through everyday face-to-face interaction and the media.</li>
     </ul>
   </section>
 
@@ -803,7 +938,7 @@ footer { margin-top: 64px; padding-top: 16px; border-top: 1px solid var(--line);
       <li>Culture changes quickly across generations, which genes cannot do.</li>
       <li>Children learn language, food habits, dress and values from their surroundings.</li>
     </ul>
-    <p><strong>Other side:</strong> Humans do have biological needs such as food and shelter. But the way these needs are met (what we eat, how we marry) is cultural.</p>
+    <p><strong>Other side:</strong> Humans do have biological needs such as food and shelter. But the way these needs are met (what we eat, how we marry) is cultural. <strong>Sociobiologists</strong> (building on Darwin's natural selection) say some traits, such as men as providers, are rooted in genes. Most sociologists reply that people's behaviour, not their genes, defines social reality.</p>
   </section>
 
   <section class="blk con"><span class="pill con">Conclusion</span>
@@ -938,6 +1073,7 @@ footer { margin-top: 64px; padding-top: 16px; border-top: 1px solid var(--line);
       <li><strong>Norms:</strong> established standards of behaviour maintained by society. To be significant they must be widely shared and understood.</li>
       <li><strong>Formal norms:</strong> written down, with strict punishments. Laws are the main example ("governmental social control", Donald Black).</li>
       <li><strong>Informal norms:</strong> generally understood but not written, such as standards of dress.</li>
+      <li><strong>Mores and folkways:</strong> mores are norms seen as vital to society's welfare (violation brings severe penalties, such as the ban on murder). Folkways govern everyday behaviour (violation brings little concern).</li>
       <li><strong>Sanctions:</strong> penalties and rewards for following or breaking a norm. Positive sanctions include a raise, a medal or praise.</li>
       <li><strong>Values:</strong> collective ideas of what is good, desirable and proper, or bad and improper.</li>
       <li><strong>Subculture:</strong> a segment of society with a distinct pattern of customs, rules and traditions.</li>
@@ -1000,7 +1136,7 @@ footer { margin-top: 64px; padding-top: 16px; border-top: 1px solid var(--line);
     <ul>
       <li><strong>Discovery:</strong> the discovery of the structure of DNA, or of a new moon of Saturn. <em>Why:</em> it adds new knowledge to culture.</li>
       <li><strong>Invention:</strong> the bow and arrow, the automobile, television, Protestantism and democracy. <em>Why:</em> each combined existing ideas or items into a new form.</li>
-      <li><strong>Diffusion:</strong> fast-food chains, social media trends, fashion and music spread across borders. <em>Why:</em> globalisation and technology make the spread faster.</li>
+      <li><strong>Diffusion:</strong> fast-food chains, social media trends, fashion and music spread across borders. <em>Why:</em> globalisation and technology make the spread faster. Ritzer calls the spread of fast-food methods into other areas of life the <strong>McDonaldization of society</strong>.</li>
     </ul>
     <p><strong>Challenges of globalisation:</strong> cultural erosion, cultural imperialism (one powerful culture dominating others) and resistance. <strong>Opportunities:</strong> cultural exchange, innovation and economic growth.</p>
   </section>
@@ -1025,6 +1161,105 @@ footer { margin-top: 64px; padding-top: 16px; border-top: 1px solid var(--line);
   <p class="back"><a href="#top">Back to contents</a></p>
 </article>
 
-<footer>Built from your lecture slides: Social Stratification, Class and Social Mobility; Socialisation; Culture. Bangladesh points are general examples to support your argument.</footer>
+<!-- Q18 -->
+<article class="q" id="q18">
+  <div class="qhead"><span class="qn">Q18</span><span class="marks">15 marks</span><span class="extra">Extra from the book</span>
+  <h3>Language policy and bilingualism. Define the terms, explain how functionalists and conflict theorists view language policy, link to Bangladesh and argue whether a country should support more than one language in schools.</h3></div>
+  <p class="lead">This is the social policy topic that closes the Culture chapter, so it is a likely exam question. It asks what a society should do when its people speak different languages.</p>
+
+  <div class="terms"><span class="lbl">Core words</span><span class="t">bilingualism</span><span class="t">language</span><span class="t">subculture</span><span class="t">ethnocentrism</span><span class="t">dominant culture</span><span class="t">cultural survival</span></div>
+
+  <section class="bn" lang="bn"><span class="pill bn-pill">বাংলায় প্রশ্নের ব্যাখ্যা</span>
+    <p class="bn-intro"><strong>প্রশ্নটা কী চাইছে?</strong> একটি দেশে যদি মানুষ নানা ভাষায় কথা বলে, তাহলে স্কুল ও সরকারি কাজে একটি ভাষা চলবে, নাকি একাধিক ভাষা (bilingualism)? এই নীতি নিয়ে ক্রিয়াবাদী ও দ্বন্দ্ববাদী দৃষ্টিভঙ্গি, বাংলাদেশের উদাহরণ এবং নিজের যুক্তি লিখতে হবে।</p>
+    <div class="bn-row"><span class="bn-k">(ক)</span><p><strong>সংজ্ঞা:</strong> Bilingualism = কোনো পরিবেশে (স্কুল বা কর্মস্থলে) দুটি ভাষা ব্যবহার করা এবং দুটিকেই সমান বৈধ মনে করা। Language = শব্দ ও প্রতীকের ব্যবস্থা, যা সংস্কৃতির ভিত্তি। Ethnocentrism = নিজের সংস্কৃতিকে শ্রেষ্ঠ ভাবা।</p></div>
+    <div class="bn-row"><span class="bn-k">(খ)</span><p><strong>উদাহরণ ও কেন:</strong> ক্রিয়াবাদী মতে ভাষা সমাজকে একসাথে বাঁধে, তাই একটি সাধারণ ভাষা দরকার। দ্বন্দ্ববাদী মতে ছোট ভাষাগোষ্ঠী নিজেদের প্রকাশের সুযোগ চায়, আর একভাষা চাপানো ক্ষমতাবানদের আধিপত্য। উদাহরণ: কানাডার কুইবেক ফরাসি ভাষা নিয়ে, সিঙ্গাপুরে ইংরেজি মাধ্যম কিন্তু মাতৃভাষাও শেখানো, চীনে তিব্বতে ম্যান্ডারিন চাপানো।</p></div>
+    <div class="bn-row"><span class="bn-k">(গ)</span><p><strong>বাংলাদেশ:</strong> ভাষা আন্দোলন ও একুশে ফেব্রুয়ারি দেখায় ভাষার অধিকার কত গুরুত্বপূর্ণ। আদিবাসী ভাষা (যেমন চাকমা) এবং বাংলা মাধ্যম বনাম ইংরেজি মাধ্যম স্কুল নিয়েও যুক্তি দেওয়া যায়।</p></div>
+    <div class="bn-row"><span class="bn-k">(ঘ)</span><p><strong>যুক্তি:</strong> মাতৃভাষায় শেখানোর পাশাপাশি রাষ্ট্রীয় ভাষা শেখানো ভালো। এতে শিশুরা ভালো শেখে এবং সংস্কৃতিও টিকে থাকে। উল্টো পক্ষে বলো, খরচ ও একতার প্রশ্ন আছে।</p></div>
+    <p class="bn-pattern"><strong>উত্তর সাজানোর নিয়ম:</strong> সংজ্ঞা, তারপর উদাহরণ ও কেন, তারপর যুক্তি, শেষে ২ লাইনের উপসংহার।</p>
+  </section>
+
+  <section class="blk def"><span class="pill def">Definition</span>
+    <ul>
+      <li><strong>Bilingualism:</strong> the use of two languages in a particular setting, such as a workplace or school, treating each language as equally legitimate. A teacher may instruct children in their native language while gradually introducing the language of the host society.</li>
+      <li><strong>Language:</strong> an abstract system of word meanings and symbols for all aspects of culture, including speech, writing and gestures. It is the foundation of every culture and carries a culture's norms, values and sanctions.</li>
+      <li><strong>Bicultural curriculum:</strong> teaching about the mores and folkways of both the dominant culture and the subculture.</li>
+    </ul>
+  </section>
+
+  <section class="blk ex"><span class="pill ex">Example and explanation</span>
+    <p><strong>The issue:</strong> In the United States about 21 percent of residents over age five speak a language other than English at home. The debate is whether schools should teach in those languages. Supporters want to ease the move into the host society. Opponents want a single cultural tradition.</p>
+    <p><strong>Functionalist view:</strong> Language unifies the members of a society, so a common language is functional. For a long time the U.S. demanded conformity to one language, which fits this view. Bilingual programmes are also functional if they help non-native speakers learn the main language and work effectively in society.</p>
+    <p><strong>Conflict view:</strong> Language minorities are a subordinated group seeking opportunities for self-expression. Many attacks on bilingual programmes come from an <em>ethnocentric</em> point of view, the idea that any difference from the majority is bad. These attitudes try to stamp out foreign influence, especially in schools.</p>
+    <p><strong>Examples around the world:</strong> In Quebec, French speakers are 83 percent of the province and French is mandatory in education for most children, while a 1995 vote on leaving Canada was almost evenly split. Singapore uses English as the medium of instruction but lets students learn their mother tongue. China has extended Mandarin instruction in Tibet. <em>Why these matter:</em> language policy can both unite and divide a nation.</p>
+    <p><strong>Evidence on results:</strong> Findings are mixed because programmes differ widely, but a review of 17 studies found that students taught in both English and their home language progressed better than those taught only in English.</p>
+  </section>
+
+  <section class="blk bd"><span class="pill bd">Bangladesh</span>
+    <ul>
+      <li><strong>Language and identity:</strong> The Bangla Language Movement and Ekushey February (21 February) show how a language can become the centre of a people's identity. This supports the view that language is the foundation of culture.</li>
+      <li><strong>Minority languages:</strong> Indigenous communities such as the Chakma, Marma and Santal have their own languages. Teaching children in their mother tongue while also teaching Bangla follows the bilingual idea, and it helps their culture survive.</li>
+      <li><strong>Bangla and English:</strong> Bangla-medium and English-medium schools offer different opportunities. This is your own application, not from the book, but it shows how language ties to class and life chances.</li>
+    </ul>
+  </section>
+
+  <section class="blk arg"><span class="pill arg">Argument</span>
+    <p><strong>My position:</strong> A country should support one shared national language and also let children learn in their mother tongue.</p>
+    <ul>
+      <li>Children learn better when they first understand the lesson, and a gradual move to the main language helps them.</li>
+      <li>Language carries culture, so losing a language can mean losing a culture.</li>
+      <li>A shared language is still needed for national unity and jobs, so the main language must be taught well.</li>
+    </ul>
+    <p><strong>Other side:</strong> Bilingual programmes cost money, and some people fear they weaken national unity. But the evidence suggests that support for home languages does not stop learners from becoming fluent in the main language.</p>
+  </section>
+
+  <section class="blk con"><span class="pill con">Conclusion</span>
+    <p>Language both unites a nation and keeps minority cultures alive. A balanced policy teaches the shared language while respecting home languages.</p>
+  </section>
+  <p class="back"><a href="#top">Back to contents</a></p>
+</article>
+
+<section class="more" id="more-terms">
+  <h2>More book terms to know</h2>
+  <p class="more-sub">Short definitions from your Schaefer chapters. Use them inside any answer to add marks.</p>
+  <div class="more-grid">
+    <div>
+      <h3>Stratification</h3>
+      <dl>
+        <dt>Income vs wealth</dt><dd>Income is salaries, wages, interest and rent. Wealth is all material assets (land, stocks, property).</dd>
+        <dt>Prestige and esteem</dt><dd>Prestige is the respect an occupation holds. Esteem is the reputation a person earns within that occupation.</dd>
+        <dt>Objective method</dt><dd>The researcher, not the person, assigns social class using occupation, education, income and residence.</dd>
+        <dt>Socioeconomic status (SES)</dt><dd>A measure of class based on income, education and occupation.</dd>
+        <dt>Rossides' five classes</dt><dd>Upper (1 to 2%), upper-middle, lower-middle, working and lower class.</dd>
+        <dt>Horizontal and vertical mobility</dt><dd>Horizontal is a move to the same rank. Vertical is a move up or down (Sorokin).</dd>
+        <dt>Lenski's view</dt><dd>As technology produces a surplus, inequality grows, and elites share only part of it.</dd>
+      </dl>
+    </div>
+    <div>
+      <h3>Socialisation</h3>
+      <dl>
+        <dt>Gender role</dt><dd>Expectations about proper behaviour, attitudes and activities of males and females.</dd>
+        <dt>Freud</dt><dd>The self is shaped by parents and by inborn drives that conflict with social limits.</dd>
+        <dt>Piaget's four stages</dt><dd>Sensorimotor, preoperational, concrete operational, formal operational.</dd>
+        <dt>Bowles and Gintis</dt><dd>Conflict view: schools foster competition through built-in rewards and punishments such as grades.</dd>
+        <dt>Peer group</dt><dd>As children grow, peers take over some of the role of significant others.</dd>
+        <dt>NORC</dt><dd>Naturally occurring retirement community, an area that becomes an informal centre for older people.</dd>
+      </dl>
+    </div>
+    <div>
+      <h3>Culture</h3>
+      <dl>
+        <dt>Culture shock</dt><dd>The disorientation people feel when they meet cultural practices unlike their own.</dd>
+        <dt>Material and nonmaterial culture</dt><dd>Material is the physical and technological side. Nonmaterial is customs, beliefs, governments and communication patterns.</dd>
+        <dt>Culture lag (Ogburn)</dt><dd>The period of maladjustment when nonmaterial culture is still adjusting to new material conditions.</dd>
+        <dt>Culture industry (Adorno)</dt><dd>The worldwide media industry that standardises the goods and services consumers demand.</dd>
+        <dt>Culture war</dt><dd>The polarisation of society over controversial cultural elements.</dd>
+        <dt>Argot</dt><dd>Specialised language used by members of a subculture.</dd>
+        <dt>Sociobiology</dt><dd>The study of how biology affects human social behaviour.</dd>
+      </dl>
+    </div>
+  </div>
+</section>
+
+<footer>Built from your lecture slides and checked against Schaefer, Sociology: A Brief Introduction (chapters on Culture, Socialization and the Life Course, and Stratification, plus the opening of Global Inequality). Bangladesh points, except Hamid and Khadeja, are general examples of mine to support your argument. Swap in your teacher's examples where they differ.</footer>
 
 </div>
