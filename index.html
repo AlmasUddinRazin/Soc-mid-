@@ -132,9 +132,47 @@ footer { margin-top: 64px; padding-top: 16px; border-top: 1px solid var(--line);
 .more dl { margin: 0; display: grid; gap: 8px; }
 .more dt { font-weight: 600; font-size: 0.92rem; line-height: 1.4; }
 .more dd { margin: 0; font-size: 0.88rem; line-height: 1.55; color: var(--muted); }
+
+/* progress tracker and checkboxes */
+body::before { content: ""; position: fixed; inset: 0 0 auto; height: env(safe-area-inset-top, 0px); z-index: 10; background: var(--bg); }
+.tracker { position: sticky; top: env(safe-area-inset-top, 0px); z-index: 9; background: var(--bg); border-bottom: 1px solid var(--line); padding: 10px 0 12px; margin-bottom: 20px; display: grid; grid-template-columns: minmax(0, auto) minmax(60px, 1fr) auto; gap: 6px 14px; align-items: center; }
+.tr-text { display: grid; line-height: 1.3; min-width: 0; }
+.tr-label { font-size: 0.72rem; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; color: var(--muted); }
+.tr-count { font-size: 0.9rem; font-variant-numeric: tabular-nums; }
+.tr-bar, .qp-bar { height: 8px; border-radius: 999px; background: var(--line); overflow: hidden; }
+.tr-bar > span, .qp-bar > span { display: block; height: 100%; width: 0; background: var(--accent); border-radius: 999px; transition: width 0.25s ease; }
+.tr-side { display: flex; align-items: center; gap: 10px; }
+.tr-pct { font-family: var(--font-head); font-size: 1.35rem; line-height: 1; font-variant-numeric: tabular-nums; min-width: 3.2ch; text-align: right; }
+.tr-reset { font: inherit; font-size: 0.78rem; color: var(--muted); background: none; border: 1px solid var(--line); border-radius: 6px; padding: 4px 10px; cursor: pointer; }
+.tr-reset:hover { color: var(--ink); border-color: var(--muted); }
+.tr-reset.confirm { color: #b42318; border-color: #b42318; }
+.tr-reset:focus-visible, .chk input:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+@media (max-width: 520px) { .tracker { grid-template-columns: minmax(0, 1fr) auto; } .tr-bar { grid-column: 1 / -1; grid-row: 2; } }
+
+.blk-head { display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 6px 12px; margin-bottom: 8px; }
+.blk-head .pill { margin-bottom: 0; }
+.chk { display: inline-flex; align-items: center; gap: 8px; font-size: 0.82rem; color: var(--muted); cursor: pointer; padding: 4px 6px; border-radius: 6px; user-select: none; }
+.chk input { width: 18px; height: 18px; margin: 0; accent-color: var(--bd); cursor: pointer; }
+.blk.is-done .chk { color: var(--bd); font-weight: 600; }
+
+.qprog { display: inline-flex; align-items: center; gap: 8px; margin-left: auto; font-size: 0.8rem; font-variant-numeric: tabular-nums; color: var(--muted); }
+.qprog .qp-bar { width: 72px; }
+.qprog.complete { color: var(--bd); font-weight: 600; }
+.qprog.complete .qp-bar > span { background: var(--bd); }
+
+.toc-set h3 .set-pct { float: right; color: var(--accent); font-variant-numeric: tabular-nums; }
+.toc-set li.done a { color: var(--bd); }
+.toc-set li.done a::after { content: " \2713"; font-weight: 600; }
 </style>
 
 <div class="wrap" id="top">
+
+<div class="tracker" id="tracker">
+  <div class="tr-text"><span class="tr-label">Your progress</span><span class="tr-count" id="tr-count" aria-live="polite">0 of 0 parts done</span></div>
+  <div class="tr-bar" id="tr-bar" role="progressbar" aria-label="Overall progress" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0"><span id="tr-fill"></span></div>
+  <div class="tr-side"><strong class="tr-pct" id="tr-pct">0%</strong><button type="button" class="tr-reset" id="tr-reset">Reset</button></div>
+</div>
+
 
 <header class="top">
   <h1>Sociology: 18 Model Answers</h1>
@@ -322,7 +360,7 @@ footer { margin-top: 64px; padding-top: 16px; border-top: 1px solid var(--line);
     <p class="bn-pattern"><strong>উত্তর সাজানোর নিয়ম:</strong> সংজ্ঞা, তারপর উদাহরণ ও কেন, তারপর যুক্তি, শেষে ২ লাইনের উপসংহার।</p>
   </section>
 
-    <section class="blk def"><span class="pill def">Definition</span>
+  <section class="blk def"><span class="pill def">Definition</span>
     <p>Stratification means ranking people into higher and lower layers in society. Marx and Weber both ask the same question: <strong>what decides a person's place in society?</strong> They give different answers.</p>
     <h4>Karl Marx (the economic view)</h4>
     <ul>
@@ -1303,3 +1341,109 @@ footer { margin-top: 64px; padding-top: 16px; border-top: 1px solid var(--line);
 <footer>Built from your lecture slides and checked against Schaefer, Sociology: A Brief Introduction (chapters on Culture, Socialization and the Life Course, and Stratification, plus the opening of Global Inequality). Bangladesh points, except Hamid and Khadeja, are general examples of mine to support your argument. Swap in your teacher's examples where they differ.</footer>
 
 </div>
+
+<script>
+(function () {
+  var KEY = "sociology-progress-v1";
+  var store = {};
+  try { var raw = localStorage.getItem(KEY); if (raw) store = JSON.parse(raw) || {}; } catch (e) { store = {}; }
+  function save() { try { localStorage.setItem(KEY, JSON.stringify(store)); } catch (e) {} }
+
+  var KINDS = ["def", "ex", "bd", "arg", "con"];
+  var arts = [].slice.call(document.querySelectorAll("article.q"));
+  var model = {}; // qid -> { parts: [{id, input, blk, txt}], chip, fill, txt }
+  var order = [];
+
+  arts.forEach(function (art) {
+    var qid = art.id, qhead = art.querySelector(".qhead");
+    var blks = [].slice.call(art.querySelectorAll(".blk"));
+    var parts = [];
+    blks.forEach(function (blk, i) {
+      var kind = KINDS.filter(function (k) { return blk.classList.contains(k); })[0] || ("p" + i);
+      var id = qid + "-" + kind;
+      var pill = blk.querySelector(":scope > .pill");
+      var head = document.createElement("div");
+      head.className = "blk-head";
+      if (pill) { blk.insertBefore(head, pill); head.appendChild(pill); } else { blk.insertBefore(head, blk.firstChild); }
+      var label = document.createElement("label");
+      label.className = "chk";
+      var input = document.createElement("input");
+      input.type = "checkbox";
+      input.id = "chk-" + id;
+      var txt = document.createElement("span");
+      label.appendChild(input); label.appendChild(txt);
+      head.appendChild(label);
+      parts.push({ id: id, input: input, blk: blk, txt: txt });
+      input.addEventListener("change", function () {
+        if (input.checked) store[id] = 1; else delete store[id];
+        save(); render();
+      });
+    });
+    var chip = document.createElement("span");
+    chip.className = "qprog";
+    chip.innerHTML = '<span class="qp-bar"><span></span></span><span class="qp-txt"></span>';
+    if (qhead) { var h3 = qhead.querySelector("h3"); qhead.insertBefore(chip, h3 || null); }
+    model[qid] = { parts: parts, chip: chip, fill: chip.querySelector(".qp-bar > span"), txt: chip.querySelector(".qp-txt") };
+    order.push(qid);
+  });
+
+  function pct(d, t) { return t ? Math.round(d / t * 100) : 0; }
+
+  function render() {
+    var totalAll = 0, doneAll = 0, perQ = {};
+    order.forEach(function (qid) {
+      var m = model[qid], d = 0;
+      m.parts.forEach(function (p) {
+        var on = !!store[p.id];
+        p.input.checked = on;
+        p.blk.classList.toggle("is-done", on);
+        p.txt.textContent = on ? "Done" : "Mark as done";
+        if (on) d++;
+      });
+      var t = m.parts.length;
+      perQ[qid] = { d: d, t: t };
+      totalAll += t; doneAll += d;
+      m.fill.style.width = pct(d, t) + "%";
+      m.txt.textContent = d + "/" + t + " · " + pct(d, t) + "%";
+      m.chip.classList.toggle("complete", t > 0 && d === t);
+    });
+    var p = pct(doneAll, totalAll);
+    document.getElementById("tr-count").textContent = doneAll + " of " + totalAll + " parts done";
+    document.getElementById("tr-pct").textContent = p + "%";
+    document.getElementById("tr-fill").style.width = p + "%";
+    document.getElementById("tr-bar").setAttribute("aria-valuenow", String(p));
+
+    [].slice.call(document.querySelectorAll(".toc-set")).forEach(function (set) {
+      var d = 0, t = 0;
+      [].slice.call(set.querySelectorAll("li")).forEach(function (li) {
+        var a = li.querySelector("a[href^='#q']");
+        if (!a) return;
+        var q = perQ[a.getAttribute("href").slice(1)];
+        if (!q) return;
+        d += q.d; t += q.t;
+        li.classList.toggle("done", q.t > 0 && q.d === q.t);
+      });
+      var h3 = set.querySelector("h3");
+      if (h3) {
+        var s = h3.querySelector(".set-pct");
+        if (!s) { s = document.createElement("span"); s.className = "set-pct"; h3.appendChild(s); }
+        s.textContent = pct(d, t) + "%";
+      }
+    });
+  }
+
+  var btn = document.getElementById("tr-reset"), timer = null;
+  btn.addEventListener("click", function () {
+    if (!btn.classList.contains("confirm")) {
+      btn.classList.add("confirm"); btn.textContent = "Tap again to clear all";
+      timer = setTimeout(function () { btn.classList.remove("confirm"); btn.textContent = "Reset"; }, 3000);
+      return;
+    }
+    clearTimeout(timer);
+    btn.classList.remove("confirm"); btn.textContent = "Reset";
+    store = {}; save(); render();
+  });
+
+  render();
+})();
+</script>
